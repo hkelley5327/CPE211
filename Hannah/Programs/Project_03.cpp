@@ -1,11 +1,11 @@
 // ****************************************
-// Program Title: Sample header file
-// Project File: Cpp_header.cpp
-// Name: Ron Bowman  replace with your name
-// Course Section: CPE-211-01  Replace with your course section
-// Lab Section: 4  replace with your lab section
-// Due Date: 01/19/05  Edit as necessary
-// program description: Description of  Edit as necessary
+// Program Title: Project 3
+// Project File: Project_03.cpp
+// Name: Hannah Kelley
+// Course Section: CPE-211-02
+// Lab Section: 3
+// Due Date: 09/13/24
+// Program description:
 // What the program does.
 // ****************************************
 
@@ -69,7 +69,7 @@ int main() {
 
   //maximum possible horizontal range calculation
   maxHorRange = (pow(initialVel, 2)) / G;
-  
+
   //print out desired calculated numbers
   cout << "Time to max height: /t" << timeToMaxHeight << endl;
   cout << "Time to max distance: /t" << timeToMaxDis << endl;
