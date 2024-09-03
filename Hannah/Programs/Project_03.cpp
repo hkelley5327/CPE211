@@ -36,9 +36,9 @@ int main() {
   cout << setfill('*');
 
   // projectile motion header set up
-  cout << left << setw(30) << endl;
+  cout << left << string(30, '*') << endl;
   cout << left << setw(30) << " Projectile Motion" << string(5, '*') << endl;
-  cout << left << setw(30) << endl << endl;
+  cout << left << string(30, '*') << endl << endl;
 
   //set blank character back to namespace
   cout << setfill(' ');
@@ -46,12 +46,12 @@ int main() {
   //ask for initial velocity, then print user value
   cout << "Enter in the intial velocity (in meters/sec): ";
   cin >> initialVel;
-  cout << initialVel << endl;
+  cout << initialVel << endl << endl;
 
   //ask for angle in degrees, then print user value
   cout << "Enter in the starting Angle (in degrees)";
   cin >> startingAngleDeg;
-  cout << startingAngleDeg << endl;
+  cout << startingAngleDeg << endl << endl;
   //convert angle from degrees to radians
   startingAngleRad = startingAngleDeg * PI / 180.0;
 
@@ -71,11 +71,11 @@ int main() {
   maxHorRange = (pow(initialVel, 2)) / G;
 
   //print out desired calculated numbers
-  cout << "Time to max height: /t" << timeToMaxHeight << endl;
-  cout << "Time to max distance: /t" << timeToMaxDis << endl;
-  cout << "Maximum height: /t" << maxHeight << endl;
-  cout << "Maximum distance : /t" << maxDis << endl;
-  cout << "Maximum range: /t" << maxHorRange << endl;
+  cout << setw(25) << "Time to max height: " << setw(10) << timeToMaxHeight << endl;
+  cout << setw(25) << "Time to max distance: " << setw(10) << timeToMaxDis << endl;
+  cout << setw(25) << "Maximum height: " << setw(10) << maxHeight << endl;
+  cout << setw(25) << "Maximum distance : " << setw(10) << maxDis << endl;
+  cout << setw(25) << "Maximum range: " << setw(10) << maxHorRange << endl;
 
   return 0;
 }
