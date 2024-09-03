@@ -62,7 +62,7 @@ int main() {
   timeToMaxDis = (2 * initialVel * sin(startingAngleRad)) / G;
 
   //maximum height calculation
-  maxHeight = (pow(initialVel, 2) * (pow(sin(startingAngleRad), 2)) / (2 * G);
+  maxHeight = (pow(initialVel, 2) * (pow(sin(startingAngleRad), 2)) / (2 * G));
 
   //maximum distance calculation
   maxDis = initialVel * timeToMaxDis * cos(startingAngleRad);
