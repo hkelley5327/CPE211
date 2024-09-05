@@ -5,8 +5,8 @@
 // Course Section: CPE-211-02
 // Lab Section: 3
 // Due Date: 09/13/24
-// Program description:
-// What the program does.
+// Program description: calculate several projectile motion
+// formulas using given inputs
 // ****************************************
 
 #include <iostream>
@@ -37,7 +37,7 @@ int main() {
 
   // projectile motion header set up
   cout << left << string(30, '*') << endl;
-  cout << left << setw(30) << " Projectile Motion" << string(5, '*') << endl;
+  cout << left << setw(30) << "*****Projectile Motion" << endl;
   cout << left << string(30, '*') << endl << endl;
 
   //set blank character back to namespace
@@ -49,7 +49,7 @@ int main() {
   cout << initialVel << endl << endl;
 
   //ask for angle in degrees, then print user value
-  cout << "Enter in the starting Angle (in degrees)";
+  cout << "Enter in the starting Angle (in degrees): ";
   cin >> startingAngleDeg;
   cout << startingAngleDeg << endl << endl;
   //convert angle from degrees to radians
@@ -71,11 +71,11 @@ int main() {
   maxHorRange = (pow(initialVel, 2)) / G;
 
   //print out desired calculated numbers
-  cout << setw(25) << "Time to max height: " << setw(10) << timeToMaxHeight << endl;
-  cout << setw(25) << "Time to max distance: " << setw(10) << timeToMaxDis << endl;
-  cout << setw(25) << "Maximum height: " << setw(10) << maxHeight << endl;
-  cout << setw(25) << "Maximum distance : " << setw(10) << maxDis << endl;
-  cout << setw(25) << "Maximum range: " << setw(10) << maxHorRange << endl;
+  cout << setw(25) << "Time to max height: " << setw(7) << fixed << setprecision(3) << timeToMaxHeight << "seconds" << endl;
+  cout << setw(25) << "Time to max distance: " << setw(7) << fixed << setprecision(3) << timeToMaxDis << "seconds"<< endl;
+  cout << setw(25) << "Maximum height: " << setw(8) << maxHeight << "meters"<< endl;
+  cout << setw(25) << "Maximum distance : " << setw(8) << maxDis << " meters"<< endl;
+  cout << setw(25) << "Maximum range: " << setw(8) << maxHorRange << " meters"<< endl;
 
   return 0;
 }
