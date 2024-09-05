@@ -20,18 +20,17 @@ using namespace std;
 const double PI = 3.14159265;
 const double G = 9.80665;
 
-// initial varibal edefinitions
-float timeToMaxHeight = 0;
-float timeToMaxDis = 0;
-float maxHeight = 0;
-float maxDis = 0;
-float maxHorRange = 0;
-float initialVel = 0;
-float startingAngleDeg = 0;
-float startingAngleRad = 0;
-
 // start of Program
 int main() {
+  // initial varibal edefinitions
+  float timeToMaxHeight = 0;
+  float timeToMaxDis = 0;
+  float maxHeight = 0;
+  float maxDis = 0;
+  float maxHorRange = 0;
+  float initialVel = 0;
+  float startingAngleDeg = 0;
+  float startingAngleRad = 0;
   //set blank character to * instead of space
   cout << setfill('*');
 
