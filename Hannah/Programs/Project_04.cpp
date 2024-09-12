@@ -65,7 +65,7 @@ int main() {
   cout << left << setw(8) << "3" << setw(10) << len3 << word3 << endl;
   cout << left << setw(8) << string(5, '-') << setw(10) << string(6, '-') << string(4, '-') << endl << endl;
 
-  float avg = ((float)len1 + (float)len2 + (float)len3) / 3;
+  float avg = ((float)len1 + (float)len2 + (float)len3) / 3.0;
   cout << fixed << setprecision(2) << "Average word length = " << avg << endl;
 
   //end of word table section
@@ -99,7 +99,7 @@ int main() {
     len2 -= 15;
   }
 
-  cout << SPECIAL_CHAR_LIST.at(lenName);
+  cout << SPECIAL_CHAR_LIST.at(len2);
 
   //using word3 variable
   cout << word3.at(0) << word3.at(len3 -1) << len3;
@@ -109,7 +109,6 @@ int main() {
   }
 
   cout << SPECIAL_CHAR_LIST.at(len3);
-
 
   cout << endl << setw(60) << string(60, '*') << endl;
 
