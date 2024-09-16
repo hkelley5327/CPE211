@@ -24,7 +24,7 @@ int main() {
   const string SPECIAL_CHAR_LIST = "!@#$%^&*(){}[]?";
 
   //password gen header
-  cout << setw(60) << left << string(60, '*') << endl;
+  cout << endl << setw(60) << left << string(60, '*') << endl;
   cout << setw(40) << right << "Password Generator" << endl;
   cout << setw(60) << left << string(60, '*') << endl;
 
@@ -66,7 +66,7 @@ int main() {
   cout << left << setw(8) << string(5, '-') << setw(10) << string(6, '-') << string(4, '-') << endl << endl;
 
   float avg = ((float)len1 + (float)len2 + (float)len3) / 3.0;
-  cout << fixed << setprecision(2) << "Average word length = " << avg << endl;
+  cout << fixed << setprecision(2) << "Average word length = " << avg << endl << endl;
 
   //end of word table section
   //-----------------------------------------------
@@ -110,7 +110,7 @@ int main() {
 
   cout << SPECIAL_CHAR_LIST.at(len3);
 
-  cout << endl << setw(60) << string(60, '*') << endl;
+  cout << endl << setw(60) << string(60, '*') << endl << endl;
 
   //end of program
 
