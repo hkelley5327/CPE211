@@ -101,7 +101,7 @@ int main(int argc, char *argv[]) {
   }
 
   //checking for a triangle
-  if ((a < b + c) || (b < a + c) || (c < a + b)) {
+  if ((a < b + c) && (b < a + c) && (c < a + b)) {
     triangle = true;
 
     //math using given inputs
@@ -134,8 +134,13 @@ int main(int argc, char *argv[]) {
   cout << string(60, '*') << endl;
   cout << "Results From Data Read:\n";
   cout << left << setfill('.') << setw(13) << "Type" << type << endl;
-  cout << left << setfill('.') << setw(13) << "Area" << fixed << setprecision(2) << area << endl;
-  cout << left << setfill('.') << setw(13) << "Perimeter" << fixed << setprecision(2) << perimeter << "\n\n";
+  if (triangle) {
+    cout << left << setfill('.') << setw(13) << "Area" << fixed << setprecision(2) << area << endl;
+    cout << left << setfill('.') << setw(13) << "Perimeter" << fixed << setprecision(2) << perimeter << "\n\n";
+  }
+  else {
+    cout << "\n\n";
+  }
 
   if (guess == type) {
     cout << "Congratulations!  Triangle specified is correct" << endl;
