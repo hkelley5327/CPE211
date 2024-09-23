@@ -122,7 +122,7 @@ int main(int argc, char *argv[]) {
   }
   else {
     triangle = false;
-    type = "non-triangle";
+    type = "not-triangle";
   }
 
   //summary of data and results
@@ -139,7 +139,7 @@ int main(int argc, char *argv[]) {
     cout << left << setfill('.') << setw(13) << "Perimeter" << fixed << setprecision(2) << perimeter << "\n\n";
   }
   else {
-    cout << "\n\n";
+    cout << endl;
   }
 
   if (guess == type) {
