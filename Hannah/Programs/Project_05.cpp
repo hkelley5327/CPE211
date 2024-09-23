@@ -55,7 +55,7 @@ int main(int argc, char *argv[]) {
   }
 
   if(inFile.good()) {
-    cout << "Reading values from input file..." << "\n\n";
+    cout << "Reading Values From Input File..." << "\n\n";
   }
 
   //reading side lenghts and guess from file
@@ -132,7 +132,7 @@ int main(int argc, char *argv[]) {
   cout << fixed << setprecision(2) << "Side C = " << c << endl;
   cout << "Guess  = " << guess << endl;
   cout << string(60, '*');
-  cout << "Results From Data Read:";
+  cout << "Results From Data Read:\n";
   cout << left << setfill('.') << setw(13) << "Type" << type << endl;
   cout << left << setfill('.') << setw(13) << "Area" << fixed << setprecision(2) << area << endl;
   cout << left << setfill('.') << setw(13) << "Perimeter" << fixed << setprecision(2) << perimeter << "\n\n";
@@ -141,7 +141,7 @@ int main(int argc, char *argv[]) {
     cout << "Congratulations!  Triangle specified is correct";
   }
   else {
-    cout << "Sorry! Triangle specidfied is incorrect" << endl;
+    cout << "Sorry! Triangle specified is incorrect" << endl;
   }
 
   cout << string(60, '*') << "\n\n";
