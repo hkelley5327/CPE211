@@ -33,8 +33,6 @@ int main(int argc, char *argv[]) {
   cout << string(20, '*') << "  Triangle Checker  " << string(20, '*') << endl;
   cout << string(60, '*') << "\n\n";
 
-  cout << "Opening Input File: " << filename;
-
   //io stream starting conditions
   ifstream inFile;
   ofstream outFile;
@@ -42,7 +40,7 @@ int main(int argc, char *argv[]) {
   inFile.open(inFileName);
 
   //tell user which file is being read
-  cout << "Opening input file: " << inFileName << endl;
+  cout << "Opening input file: " << inFileName << "\n\n";
 
   //io stream test, code from project files
   if(inFile.fail() )
@@ -57,7 +55,7 @@ int main(int argc, char *argv[]) {
   }
 
   if(inFile.good()) {
-    cout << "Reading values from input file...\n\n";
+    cout << "Reading values from input file..." << "\n\n";
   }
 
   //reading side lenghts and guess from file
