@@ -65,14 +65,6 @@ int main(int argc, char *argv[]) {
     char label;
 
     inFile >> label;
-    if (label == '0') {
-      cout << left << setfill(' ') << string(15, '*') << " File Read Error " << string(15, '*') << endl;
-      cout << "==> Error reading data from input file.\n";
-      cout << "==> Terminating program now...\n";
-      cout << string(47, '*') << "\n\n";
-
-      return 1;
-    }
     if (label == 'a') {
       inFile >> a;
     }
@@ -84,6 +76,15 @@ int main(int argc, char *argv[]) {
     }
     else {
       inFile >> guess;
+    }
+
+    if (a == 0) {
+      cout << left << setfill(' ') << string(15, '*') << " File Read Error " << string(15, '*') << endl;
+      cout << "==> Error reading data from input file.\n";
+      cout << "==> Terminating program now...\n";
+      cout << string(47, '*') << "\n\n";
+
+      return 1;
     }
 
     count++;
