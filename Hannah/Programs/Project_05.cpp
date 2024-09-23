@@ -65,6 +65,14 @@ int main(int argc, char *argv[]) {
     char label;
 
     inFile >> label;
+    if (label == '') {
+      cout << left << setfill(' ') << string(15, '*') << " File Read Error " << string(15, '*') << endl;
+      cout << "==> Error reading data from input file.\n";
+      cout << "==> Terminating program now...\n";
+      cout << string(47, '*') << "\n\n";
+
+      return 1;
+    }
     if (label == 'a') {
       inFile >> a;
     }
@@ -81,7 +89,7 @@ int main(int argc, char *argv[]) {
     count++;
   }
 
-  if(inFile.bad()) {
+  /*if(inFile.bad()) {
     cout << left << setfill(' ') << string(15, '*') << " File Read Error " << string(15, '*') << endl;
     cout << "==> Error reading data from input file.\n";
     cout << "==> Terminating program now...\n";
@@ -89,7 +97,7 @@ int main(int argc, char *argv[]) {
 
     return 1;
   }
-
+  */
   //checking for negative input values
   if ((a < 0) || (b < 0) || (c < 0)) {
     cout << left << setfill(' ') << string(15, '*') << " File Data Error " << string(15, '*') << endl;
