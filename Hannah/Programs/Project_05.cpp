@@ -131,14 +131,14 @@ int main(int argc, char *argv[]) {
   cout << fixed << setprecision(2) << "Side B = " << b << endl;
   cout << fixed << setprecision(2) << "Side C = " << c << endl;
   cout << "Guess  = " << guess << endl;
-  cout << string(60, '*');
+  cout << string(60, '*') << endl;
   cout << "Results From Data Read:\n";
   cout << left << setfill('.') << setw(13) << "Type" << type << endl;
   cout << left << setfill('.') << setw(13) << "Area" << fixed << setprecision(2) << area << endl;
   cout << left << setfill('.') << setw(13) << "Perimeter" << fixed << setprecision(2) << perimeter << "\n\n";
 
   if (guess == type) {
-    cout << "Congratulations!  Triangle specified is correct";
+    cout << "Congratulations!  Triangle specified is correct" << endl;
   }
   else {
     cout << "Sorry! Triangle specified is incorrect" << endl;
