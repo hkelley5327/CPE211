@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
   //code from Mr. Bowman, testing iostream file input name given?
   if(argc != 2) {
     cout << endl;
-    cout << string(9,'*') << "Command Line Argument Error "
+    cout << string(9,'*') << " Command Line Argument Error "
     << string(9,'*') << endl;
     cout << "==> Incorrect number of Command Line Arguments!\n";
     cout << "==> Command for running the program is:\n";
@@ -46,9 +46,9 @@ int main(int argc, char *argv[]) {
   if(inFile.fail() )
   {
     cout << string(15, '*') << " File Open Error "
-    << string(15, '8') << endl;
+    << string(15, '*') << endl;
     cout << "==> Input file failed to open properly!!\n";
-    cout << "==> Attempted to open file: " << filename << endl;
+    cout << "==> Attempted to open file: " << inFileName << endl;
     cout << "==> Terminating program!!!\n";
     cout << string(47, '*') << "\n\n";
     return 1;
@@ -78,15 +78,6 @@ int main(int argc, char *argv[]) {
       inFile >> guess;
     }
 
-    if (a == 0) {
-      cout << left << setfill(' ') << string(15, '*') << " File Read Error " << string(15, '*') << endl;
-      cout << "==> Error reading data from input file.\n";
-      cout << "==> Terminating program now...\n";
-      cout << string(47, '*') << "\n\n";
-
-      return 1;
-    }
-
     if ((a == 0) && (b == 0) && (c == 0)) {
       cout << left << string(15, '*') << " Input File is Empty " << string(15, '*') << endl;
       cout << left << "==> No Information in the input file.\n";
@@ -94,6 +85,15 @@ int main(int argc, char *argv[]) {
       cout << left << string(47, '*');
 
       return 0;
+    }
+
+    if (a == 0) {
+      cout << left << setfill(' ') << string(15, '*') << " File Read Error " << string(15, '*') << endl;
+      cout << "==> Error reading data from input file.\n";
+      cout << "==> Terminating program now...\n";
+      cout << string(47, '*') << "\n\n";
+
+      return 1;
     }
 
     count++;
