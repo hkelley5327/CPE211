@@ -65,7 +65,7 @@ int main(int argc, char *argv[]) {
     char label;
 
     inFile >> label;
-    if (label == nullptr) {
+    if (label == '0') {
       cout << left << setfill(' ') << string(15, '*') << " File Read Error " << string(15, '*') << endl;
       cout << "==> Error reading data from input file.\n";
       cout << "==> Terminating program now...\n";
