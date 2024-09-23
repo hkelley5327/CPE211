@@ -35,7 +35,6 @@ int main(int argc, char *argv[]) {
 
   //io stream starting conditions
   ifstream inFile;
-  ofstream outFile;
   string inFileName = argv[1];
   inFile.open(inFileName);
 
@@ -159,6 +158,8 @@ int main(int argc, char *argv[]) {
   }
 
   cout << string(60, '*') << "\n\n";
+
+  inFile.close(inFileName);
 
 return 0;
 }
