@@ -87,18 +87,18 @@ int main(int argc, char *argv[]) {
       return 1;
     }
 
+    if ((a == 0) && (b == 0) && (c == 0)) {
+      cout << left << string(15, '*') << " Input File is Empty " << string(15, '*') << endl;
+      cout << left << "==> No Information in the input file.\n";
+      cout << left << "==> Terminating program now...\n";
+      cout << left << string(47, '*');
+
+      return 0;
+    }
+
     count++;
   }
 
-  /*if(inFile.bad()) {
-    cout << left << setfill(' ') << string(15, '*') << " File Read Error " << string(15, '*') << endl;
-    cout << "==> Error reading data from input file.\n";
-    cout << "==> Terminating program now...\n";
-    cout << string(47, '*') << "\n\n";
-
-    return 1;
-  }
-  */
   //checking for negative input values
   if ((a < 0) || (b < 0) || (c < 0)) {
     cout << left << setfill(' ') << string(15, '*') << " File Data Error " << string(15, '*') << endl;
