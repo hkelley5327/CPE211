@@ -61,7 +61,7 @@ int main(int argc, char *argv[]) {
   int count = 0;
 
   while (count < 4) {
-    
+
     //check for empty flie
     if ((count == 0) && !inFile.eof()) {
       cout << left << string(15, '*') << " Input File is Empty " << string(15, '*') << endl;
@@ -171,7 +171,7 @@ int main(int argc, char *argv[]) {
 
   cout << string(60, '*') << "\n\n";
 
-  inFile.close(inFileName);
+  inFile.close();
 
 return 0;
 }
