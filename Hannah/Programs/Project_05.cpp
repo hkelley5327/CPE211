@@ -77,14 +77,22 @@ int main(int argc, char *argv[]) {
       inFile >> guess;
     }
 
-    if ((a == 0) && (b == 0) && (c == 0)) {
+    if ((count == 1) && ((a == 0) || (b == 0) || (c == 0) || (guess == "")) {
+      cout << left << string(15, '*') << " Input File is Empty " << string(15, '*') << endl;
+      cout << left << "==> No Information in the input file.\n";
+      cout << left << "==> Terminating program now...\n";
+      cout << left << string(47, '*');
+    }
+
+    /*if ((a == 0) && (b == 0) && (c == 0) {
       cout << left << string(15, '*') << " Input File is Empty " << string(15, '*') << endl;
       cout << left << "==> No Information in the input file.\n";
       cout << left << "==> Terminating program now...\n";
       cout << left << string(47, '*');
 
-      return 0;
+      return 1;
     }
+    */
 
     if (a == 0) {
       cout << left << setfill(' ') << string(15, '*') << " File Read Error " << string(15, '*') << endl;
