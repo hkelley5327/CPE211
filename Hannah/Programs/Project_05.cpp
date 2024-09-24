@@ -82,7 +82,7 @@ int main(int argc, char *argv[]) {
       cout << left << string(13, '*') << " Input File Is Empty " << string(13, '*') << endl;
       cout << left << "==> No Information in the input file.\n";
       cout << left << "==> Terminating program now...\n";
-      cout << left << string(47, '*') << endl;
+      cout << left << string(47, '*') << "\n\n";
 
       return 1;
     }
