@@ -77,7 +77,7 @@ int main(int argc, char *argv[]) {
       inFile >> guess;
     }
 
-    if ((count == 1) && ((a == 0) || (b == 0) || (c == 0) || (guess == "")) {
+    if ((count == 1) && ((a == 0) || (b == 0) || (c == 0) || (guess == nullptr)) {
       cout << left << string(15, '*') << " Input File is Empty " << string(15, '*') << endl;
       cout << left << "==> No Information in the input file.\n";
       cout << left << "==> Terminating program now...\n";
