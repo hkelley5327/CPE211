@@ -78,7 +78,7 @@ int main(int argc, char *argv[]) {
     }
 
     //check for empty flie
-    if ((count == 0) && !inFile.eof()) {
+    if ((count == 0) && inFile.eof()) {
       cout << left << string(15, '*') << " Input File is Empty " << string(15, '*') << endl;
       cout << left << "==> No Information in the input file.\n";
       cout << left << "==> Terminating program now...\n";
