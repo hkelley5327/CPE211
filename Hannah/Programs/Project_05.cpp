@@ -8,6 +8,7 @@
 using namespace std;
 
 int main(int argc, char *argv[]) {
+
   //declare starting variables
   double a, b, c;
   string guess;
@@ -16,7 +17,7 @@ int main(int argc, char *argv[]) {
   string filename;
   bool triangle;
 
-  //code from Mr. Bowman, testing iostream file input name given?
+  //code from Mr. Bowman, testing to see if iostream file input name given, also test for correct number of arguments
   if(argc != 2) {
     cout << endl;
     cout << string(9,'*') << " Command Line Argument Error "
@@ -42,6 +43,7 @@ int main(int argc, char *argv[]) {
   cout << "Opening input file: " << inFileName << "\n\n";
 
   //io stream test, code from project files
+  //if in the failstate, didn't open file correctly, end program
   if(inFile.fail() )
   {
     cout << string(15, '*') << " File Open Error "
@@ -53,6 +55,7 @@ int main(int argc, char *argv[]) {
     return 1;
   }
 
+  //if not in failstate, read in the values
   if(inFile.good()) {
     cout << "Reading Values From Input File..." << "\n\n";
   }
@@ -64,6 +67,8 @@ int main(int argc, char *argv[]) {
     char label;
 
     inFile >> label;
+
+    //if label matches the variable, set the variable to the next value in inFile
     if (label == 'a') {
       inFile >> a;
     }
@@ -77,7 +82,7 @@ int main(int argc, char *argv[]) {
       inFile >> guess;
     }
 
-    //check for empty flie
+    //check for empty file, if on the first iteration and eof is true, it must be an empty file, or at least not enough inputs
     if ((count == 0) && inFile.eof()) {
       cout << left << string(13, '*') << " Input File Is Empty " << string(13, '*') << endl;
       cout << left << "==> No Information in the input file.\n";
@@ -86,16 +91,6 @@ int main(int argc, char *argv[]) {
 
       return 1;
     }
-
-    /*if ((a == 0) && (b == 0) && (c == 0) {
-      cout << left << string(15, '*') << " Input File is Empty " << string(15, '*') << endl;
-      cout << left << "==> No Information in the input file.\n";
-      cout << left << "==> Terminating program now...\n";
-      cout << left << string(47, '*');
-
-      return 1;
-    }
-    */
 
     if (a == 0) {
       cout << left << setfill(' ') << string(15, '*') << " File Read Error " << string(15, '*') << endl;
@@ -109,7 +104,7 @@ int main(int argc, char *argv[]) {
     count++;
   }
 
-  //checking for negative input values
+  //checking for negative input values, if yes, stop Program
   if ((a < 0) || (b < 0) || (c < 0)) {
     cout << left << setfill(' ') << string(15, '*') << " File Data Error " << string(15, '*') << endl;
     cout << "==> Error: One or more side lengths are negative.\n";
@@ -119,7 +114,7 @@ int main(int argc, char *argv[]) {
     return 1;
   }
 
-  //checking for a triangle
+  //checking for a triangle using trianlge conditions given in project files
   if ((a < b + c) && (b < a + c) && (c < a + b)) {
     triangle = true;
 
@@ -129,9 +124,11 @@ int main(int argc, char *argv[]) {
     area = sqrt(s * (s-a) * (s-b) * (s-c));
 
     //checking type of triangle
+    //if all three sides are equal, it is equilateral
     if ((a==b) && (b==c)) {
       type = "equilateral";
     }
+    //if two sides are equal, it is isosceles
     else if ((a==b) || (b==c) || (a==c)) {
         type = "isosceles";
     }
@@ -170,7 +167,8 @@ int main(int argc, char *argv[]) {
 
   cout << string(60, '*') << "\n\n";
 
-  inFile.close();
+    //close inFile, no longer necessary
+    inFile.close();
 
 return 0;
 }
