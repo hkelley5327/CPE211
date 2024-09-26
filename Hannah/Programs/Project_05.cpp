@@ -44,8 +44,7 @@ int main(int argc, char *argv[]) {
 
   //io stream test, code from project files
   //if in the failstate, didn't open file correctly, end program
-  if(inFile.fail() )
-  {
+  if(inFile.fail() ) {
     cout << string(15, '*') << " File Open Error "
     << string(15, '*') << endl;
     cout << "==> Input file failed to open properly!!\n";
@@ -62,6 +61,16 @@ int main(int argc, char *argv[]) {
 
   //reading side lenghts and guess from file
   int count = 0;
+
+  //check for empty file, if on the first iteration and eof is true, it must be an empty file, or at least not enough inputs
+  if ((count == 0) && inFile.eof()) {
+    cout << left << string(13, '*') << " Input File Is Empty " << string(13, '*') << endl;
+    cout << left << "==> No Information in the input file.\n";
+    cout << left << "==> Terminating program now...\n";
+    cout << left << string(47, '*') << "\n\n";
+
+    return 1;
+  }
 
   while (count < 4) {
     char label;
@@ -82,25 +91,6 @@ int main(int argc, char *argv[]) {
       inFile >> guess;
     }
 
-    //check for empty file, if on the first iteration and eof is true, it must be an empty file, or at least not enough inputs
-    if ((count == 0) && inFile.eof()) {
-      cout << left << string(13, '*') << " Input File Is Empty " << string(13, '*') << endl;
-      cout << left << "==> No Information in the input file.\n";
-      cout << left << "==> Terminating program now...\n";
-      cout << left << string(47, '*') << "\n\n";
-
-      return 1;
-    }
-
-    if (a == 0) {
-      cout << left << setfill(' ') << string(15, '*') << " File Read Error " << string(15, '*') << endl;
-      cout << "==> Error reading data from input file.\n";
-      cout << "==> Terminating program now...\n";
-      cout << string(47, '*') << "\n\n";
-
-      return 1;
-    }
-
     count++;
   }
 
@@ -108,6 +98,15 @@ int main(int argc, char *argv[]) {
   if ((a < 0) || (b < 0) || (c < 0)) {
     cout << left << setfill(' ') << string(15, '*') << " File Data Error " << string(15, '*') << endl;
     cout << "==> Error: One or more side lengths are negative.\n";
+    cout << "==> Terminating program now...\n";
+    cout << string(47, '*') << "\n\n";
+
+    return 1;
+  }
+
+  if ((a == 0) || (b == 0) || (c == 0)) {
+    cout << left << setfill(' ') << string(15, '*') << " File Read Error " << string(15, '*') << endl;
+    cout << "==> Error reading data from input file.\n";
     cout << "==> Terminating program now...\n";
     cout << string(47, '*') << "\n\n";
 
