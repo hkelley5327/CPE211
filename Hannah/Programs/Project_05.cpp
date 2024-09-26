@@ -61,6 +61,9 @@ int main(int argc, char *argv[]) {
 
   //reading side lenghts and guess from file
   int count = 0;
+  char label;
+
+  inFile >> label;
 
   //check for empty file, if on the first iteration and eof is true, it must be an empty file, or at least not enough inputs
   if ((count == 0) && inFile.eof()) {
@@ -73,10 +76,6 @@ int main(int argc, char *argv[]) {
   }
 
   while (count < 4) {
-    char label;
-
-    inFile >> label;
-
     //if label matches the variable, set the variable to the next value in inFile
     if (label == 'a') {
       inFile >> a;
@@ -91,6 +90,7 @@ int main(int argc, char *argv[]) {
       inFile >> guess;
     }
 
+    inFile >> label;
     count++;
   }
 
