@@ -80,7 +80,7 @@ int main(int argc, char *argv[]) {
 
     inFile >> label;
 
-    //if label matches the variable, set the variable to the next value in inFile
+    //if label matches the variable, set the variable we're looking for to the next value in inFile
     if (label == 'a') {
       inFile >> a;
     }
