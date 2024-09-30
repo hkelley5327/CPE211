@@ -1,4 +1,16 @@
-//include all necessary headers
+// ****************************************
+// Program Title: Project 5
+// Project File: Project_05.cpp
+// Name: Hannah Kelley
+// Course Section: CPE-211-02
+// Lab Section: 3
+// Due Date: 10/1/24
+// Program description: take an file name as in input and reading
+// necessary data and make triangle calculations
+// additionally, test to see if the given numbers form a triangle
+// ****************************************
+
+/include all necessary headers
 #include <iostream>
 #include <cmath>
 #include <iomanip>
