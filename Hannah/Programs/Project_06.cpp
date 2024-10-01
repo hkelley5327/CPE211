@@ -150,6 +150,8 @@ int main(int argc, char *argv[]) {
 
     //read in next line before looping back
     getline(inFile, line, '\n');
+
+    i++;
   }
 
   //calculate percentages
