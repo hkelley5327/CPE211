@@ -115,7 +115,7 @@ int main(int argc, char *argv[]) {
     //add one to the total number of lines
     numLine++;
 
-    while (getfile(inFile, line)) {
+    while (ch != '\n') {
       //reset
       int i = 0;
       ch = line[i];
