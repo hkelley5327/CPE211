@@ -22,8 +22,15 @@ using namespace std;
 int main(int argc, char *argv[]) {
 
   //variable declarations
-  int lineChCount, lineLetter, lineDigit, lineNeither;                  //line totals
-  int numLine, letterTotal, digitTotal, neitherTotal, totalChar;        //global totals
+  int lineChCount = 0;    //line totals
+  int lineLetter = 0;
+  int lineDigit = 0;
+  int lineNeither = 0;
+  int numLine = 0;        //gloabl Totals
+  int letterTotal = 0;
+  int digitTotal = 0;
+  int neitherTotal = 0;
+  int totalChar = 0;
   string line;
   char ch;
   double letterPer, digitPer, neitherPer;
