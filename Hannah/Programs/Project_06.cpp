@@ -79,7 +79,7 @@ int main(int argc, char *argv[]) {
   //test outFile with header
   outFile << left << setw(15) << "Line Number" << setw(10) << "Letters" << setw(10) << "Digits" << setw(10) << "Other" << "Total" << endl;
 
-  //if in fail state, run loop until no longer in fail state
+  //check status
   while (!outFile) {
 
     //output file error message
@@ -109,6 +109,9 @@ int main(int argc, char *argv[]) {
   //while the end of the file has not been reached
   while (!inFile.eof()) {
 
+    int i = 0;
+    ch = line[i];
+
     //reset line totals
     lineLetter = lineDigit = lineNeither = lineChCount = 0;
 
@@ -116,9 +119,6 @@ int main(int argc, char *argv[]) {
     numLine++;
 
     while (ch != '\n') {
-      //reset
-      int i = 0;
-      ch = line[i];
 
       inFile >> ch;
       if (isalpha(ch)) {
