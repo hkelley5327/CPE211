@@ -107,7 +107,7 @@ int main(int argc, char *argv[]) {
   outFile << left << setw(15) << string(11, '-') << setw(10) << string(7, '-') << setw(10) << string(7, '-') << setw(10) << string(5, '-') << string(5, '-') << endl;
 
   //while the end of the file has not been reached
-  while (!inFile.eof()) {
+  while (!inFile.eof() && inFile.good()) {
 
     int i = 0;
     ch = line[i];
@@ -139,6 +139,9 @@ int main(int argc, char *argv[]) {
         lineChCount++;
         totalChar++;
       }
+
+      i++;
+
     }
 
     //new line character isn't counted, so increment the total and line total by one to account for it
@@ -150,8 +153,6 @@ int main(int argc, char *argv[]) {
 
     //read in next line before looping back
     getline(inFile, line, '\n');
-
-    i++;
   }
 
   //calculate percentages
