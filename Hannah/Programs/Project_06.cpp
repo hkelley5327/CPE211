@@ -79,7 +79,7 @@ int main(int argc, char *argv[]) {
   //test outFile with header
   outFile << left << setw(15) << "Line Number" << setw(10) << "Letters" << setw(10) << "Digits" << setw(10) << "Other" << "Total" << endl;
 
-  //check status
+  //if in fail state, run loop until no longer in fail state
   while (!outFile) {
 
     //output file error message
@@ -115,7 +115,7 @@ int main(int argc, char *argv[]) {
     //add one to the total number of lines
     numLine++;
 
-    while (ch != '\n') {
+    while (getfile(inFile, line)) {
       //reset
       int i = 0;
       ch = line[i];
