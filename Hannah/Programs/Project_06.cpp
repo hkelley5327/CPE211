@@ -118,7 +118,7 @@ int main(int argc, char *argv[]) {
     //add one to the total number of lines
     numLine++;
 
-    while (i < line.length()) {
+    while (i < line.length() - 1) {
 
       inFile >> ch;
       if (isalpha(ch)) {
