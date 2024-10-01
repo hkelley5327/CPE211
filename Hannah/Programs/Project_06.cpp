@@ -120,7 +120,10 @@ int main(int argc, char *argv[]) {
     ch = line[i];
 
     //reset line totals
-    lineLetter = lineDigit = lineNeither = lineChCount = 0;
+    lineLetter = 0;
+    lineDigit = 0;
+    lineNeither = 0;
+    lineChCount = 0;
 
     //add one to the total number of lines
     numLine++;
@@ -129,20 +132,29 @@ int main(int argc, char *argv[]) {
 
       inFile >> ch;
       if (isalpha(ch)) {
+        //line totals
         lineLetter++;
         letterTotal++;
+
+        //gloabl totals
         lineChCount++;
         totalChar++;
       }
       else if (isdigit(ch)) {
+        //line totals
         lineDigit++;
         digitTotal++;
+
+        //gloabl totals
         lineChCount++;
         totalChar++;
       }
       else {
+        //line totals
         lineNeither++;
         neitherTotal++;
+
+        //gloabl totals
         lineChCount++;
         totalChar++;
       }
