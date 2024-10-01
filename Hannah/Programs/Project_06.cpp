@@ -107,7 +107,7 @@ int main(int argc, char *argv[]) {
   outFile << left << setw(15) << string(11, '-') << setw(10) << string(7, '-') << setw(10) << string(7, '-') << setw(10) << string(5, '-') << string(5, '-') << endl;
 
   //while the end of the file has not been reached
-  while (!inFile.eof() && inFile.good()) {
+  while (inFile.good()) {
 
     int i = 0;
     ch = line[i];
