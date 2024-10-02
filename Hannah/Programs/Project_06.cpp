@@ -130,7 +130,7 @@ int main(int argc, char *argv[]) {
   while (inFile.good()) {
 
     int i = 0;
-    ch = line[i];
+    ch = line[i - 1];
 
     //reset line totals
     lineLetter = 0;
@@ -182,7 +182,6 @@ int main(int argc, char *argv[]) {
     //new line character isn't counted, so increment the total and line total by one to account for it
     lineNeither++;
     totalChar++;
-
 
     outFile << left << setw(15) << numLine << setw(10) << lineLetter << setw(10) << lineDigit << setw(10) << lineNeither <<  lineChCount << endl;
 
