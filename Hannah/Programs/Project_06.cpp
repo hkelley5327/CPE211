@@ -163,7 +163,7 @@ int main(int argc, char *argv[]) {
 
       i++;
 
-      cout << lineLetter << endl << letterTotal <<  endl << lineChCount <<  endl << digitTotal <<  endl << lineNeither <<  endl << neitherTotal <<  endl << totalChar << lineDigit
+      cout << lineLetter << endl << letterTotal <<  endl << lineChCount <<  endl << digitTotal <<  endl << lineNeither <<  endl << neitherTotal <<  endl << totalChar << lineDigit;
 
     }
 
