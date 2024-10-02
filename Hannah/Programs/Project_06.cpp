@@ -159,11 +159,15 @@ int main(int argc, char *argv[]) {
         //gloabl totals
         lineChCount++;
         totalChar++;
+
+        //for debugging purposes only
+        cout << lineLetter << endl << letterTotal <<  endl << lineChCount <<  endl << digitTotal <<  endl << lineNeither <<  endl << neitherTotal <<  endl << totalChar << endl << lineDigit << "\n\n";
       }
 
       i++;
 
-      cout << lineLetter << endl << letterTotal <<  endl << lineChCount <<  endl << digitTotal <<  endl << lineNeither <<  endl << neitherTotal <<  endl << totalChar << lineDigit;
+      //for debugging purposes only
+      cout << lineLetter << endl << letterTotal <<  endl << lineChCount <<  endl << digitTotal <<  endl << lineNeither <<  endl << neitherTotal <<  endl << totalChar << endl << lineDigit << "\n\n";
 
     }
 
