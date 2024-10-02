@@ -172,13 +172,10 @@ int main(int argc, char *argv[]) {
         totalChar++;
 
         //for debugging purposes only
-        cout << lineLetter << endl << letterTotal <<  endl << lineChCount <<  endl << digitTotal <<  endl << lineNeither <<  endl << neitherTotal <<  endl << totalChar << endl << lineDigit << "\n\n";
+        cout << numLine << "******" << endl << lineLetter << endl << letterTotal <<  endl << lineChCount <<  endl << digitTotal <<  endl << lineNeither <<  endl << neitherTotal <<  endl << totalChar << endl << lineDigit << "\n\n";
       }
 
       i++;
-
-      //for debugging purposes only
-      cout << lineLetter << endl << letterTotal <<  endl << lineChCount <<  endl << digitTotal <<  endl << lineNeither <<  endl << neitherTotal <<  endl << totalChar << endl << lineDigit << "\n\n";
 
     }
 
@@ -194,9 +191,9 @@ int main(int argc, char *argv[]) {
   }
 
   //calculate percentages
-  letterPer = (double)letterTotal/(double)totalChar;
-  digitPer = (double)digitTotal/(double)totalChar;
-  neitherPer = (double)neitherTotal/(double)totalChar;
+  letterPer = ((double)letterTotal/(double)totalChar) * 100;
+  digitPer = ((double)digitTotal/(double)totalChar) * 100;
+  neitherPer = ((double)neitherTotal/(double)totalChar) * 100;
 
 
   //total and percent row on tables
