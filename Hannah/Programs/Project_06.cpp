@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
   int lineDigit = 0;
   int lineNeither = 0;
 
-  int numLine = 0;        //gloabl Totals
+  int numLine = 0;        //global Totals
   int letterTotal = 0;
   int digitTotal = 0;
   int neitherTotal = 0;
@@ -37,14 +37,8 @@ int main(int argc, char *argv[]) {
   char ch;
   double letterPer, digitPer, neitherPer;
 
-  //iostream object declarations
-  string inFileName = argv[1];
-  string outFileName = argv[2];
-  ifstream inFile;
-  ofstream outFile;
-
   //command line arguments present? right number?
-  if(argc != 2) {
+  if(argc != 3) {
     cout << endl;
     cout << string(9,'*') << " Command Line Argument Error " << string(9,'*') << endl;
     cout << "==> Incorrect number of Command Line Arguments!\n";
@@ -53,6 +47,12 @@ int main(int argc, char *argv[]) {
     cout << string(47,'*') << endl << endl;
     return 1;
   }
+
+  //iostream object declarations
+  string inFileName = argv[1];
+  string outFileName = argv[2];
+  ifstream inFile;
+  ofstream outFile;
 
   //open inFile and check status
   cout << "\nOpening the input file...\n";
