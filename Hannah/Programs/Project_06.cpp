@@ -26,11 +26,13 @@ int main(int argc, char *argv[]) {
   int lineLetter = 0;
   int lineDigit = 0;
   int lineNeither = 0;
+
   int numLine = 0;        //gloabl Totals
   int letterTotal = 0;
   int digitTotal = 0;
   int neitherTotal = 0;
   int totalChar = 0;
+
   string line;
   char ch;
   double letterPer, digitPer, neitherPer;
@@ -160,6 +162,8 @@ int main(int argc, char *argv[]) {
       }
 
       i++;
+
+      cout << lineLetter << endl << letterTotal <<  endl << lineChCount <<  endl << digitTotal <<  endl << lineNeither <<  endl << neitherTotal <<  endl << totalChar << lineDigit
 
     }
 
