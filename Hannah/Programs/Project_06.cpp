@@ -172,7 +172,7 @@ int main(int argc, char *argv[]) {
         totalChar++;
 
         //for debugging purposes only
-        cout << numLine << "******" << endl << lineLetter << endl << letterTotal <<  endl << lineChCount <<  endl << digitTotal <<  endl << lineNeither <<  endl << neitherTotal <<  endl << totalChar << endl << lineDigit << "\n\n";
+        cout << numLine << "******" << endl << << "i- " << i << endl << lineLetter << endl << letterTotal <<  endl << lineChCount <<  endl << digitTotal <<  endl << lineNeither <<  endl << neitherTotal <<  endl << totalChar << endl << lineDigit << "\n\n";
       }
 
       i++;
