@@ -43,6 +43,17 @@ int main(int argc, char *argv[]) {
   ifstream inFile;
   ofstream outFile;
 
+  //command line arguments present? right number?
+  if(argc != 2) {
+    cout << endl;
+    cout << string(9,'*') << " Command Line Argument Error " << string(9,'*') << endl;
+    cout << "==> Incorrect number of Command Line Arguments!\n";
+    cout << "==> Command for running the program is:\n";
+    cout << "==> ./Project_05 inputFileName\n";
+    cout << string(47,'*') << endl << endl;
+    return 1;
+  }
+
   //open inFile and check status
   cout << "\nOpening the input file...\n";
   inFile.open(inFileName);
