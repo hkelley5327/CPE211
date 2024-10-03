@@ -183,7 +183,6 @@ int main(int argc, char *argv[]) {
     lineNeither++;
     totalChar++;
 
-
     outFile << left << setw(15) << numLine << setw(10) << lineLetter << setw(10) << lineDigit << setw(10) << lineNeither <<  lineChCount << endl;
 
     //read in next line before looping back

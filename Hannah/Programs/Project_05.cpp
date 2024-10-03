@@ -10,7 +10,7 @@
 // additionally, test to see if the given numbers form a triangle
 // ****************************************
 
-/include all necessary headers
+//include all necessary headers
 #include <iostream>
 #include <cmath>
 #include <iomanip>
