@@ -8,22 +8,30 @@ using namespace std;
 int main(int argc, char* argv[]) {
     // Check for correct number of command line arguments
     if (argc != 3) {
-        cerr << "Usage: " << argv[0] << " <input_file> <output_file>" << endl;
+        cout << "Usage: " << argv[0] << " <input_file> <output_file>" << endl;
         return 1;
     }
 
     // Input and output file streams
     ifstream inputFile;
-    ofstream outputFile;
+    ofstream outFile;
+
+    inputFile.open();
+    outputFile.open();
+
+    // priming reads
+    inputFile >> ch;
+    outputFile << left << setw(15) << "Line Number" << setw(10) << "Letters" << setw(10) << "Digits" << setw(10) << "Other" << "Total" << endl;
+
 
     // Open input file
-    while (!inputFile.is_open()) {
+    while (!inputFile) {
         cout << "Enter input file name: ";
         string inputFileName;
         cin >> inputFileName;
         inputFile.open(inputFileName);
         if (!inputFile.is_open()) {
-            cerr << "Error opening input file: " << inputFileName << endl;
+            cout << "Error opening input file: " << inputFileName << endl;
         }
     }
     cout << "Opening the input file...\n";
@@ -35,7 +43,7 @@ int main(int argc, char* argv[]) {
         cin >> outputFileName;
         outputFile.open(outputFileName);
         if (!outputFile.is_open()) {
-            cerr << "Error opening output file: " << outputFileName << endl;
+            cout << "Error opening output file: " << outputFileName << endl;
         }
     }
     cout << "Opening the output file...\n";

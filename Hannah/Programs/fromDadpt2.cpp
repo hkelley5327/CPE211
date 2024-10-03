@@ -15,6 +15,9 @@
 #include <iomanip>
 #include <cctype>
 #include <fstream>
+#include <string>
+#include <vector>
+//#include <>
 
 using namespace std;
 
@@ -38,12 +41,12 @@ int main(int argc, char *argv[]) {
 
   //command line arguments present? right number?
   if(argc != 3) {
-    cout << endl;
-    cout << string(9,'*') << " Command Line Argument Error " << string(9,'*') << endl;
-    cout << "==> Incorrect number of Command Line Arguments!\n";
-    cout << "==> Command for running the program is:\n";
-    cout << "==> ./Project_05 inputFileName\n";
-    cout << string(47,'*') << endl << endl;
+	  cout << endl;
+	  cout << string(9,'*') << " Command Line Argument Error " << string(9,'*') << endl;
+	  cout << "==> Incorrect number of Command Line Arguments!\n";
+	  cout << "==> Command for running the program is:\n";
+	  cout << "==> ./Project_05 inputFileName\n";
+	  cout << string(47,'*') << endl << endl;
     return 1;
   }
 
@@ -54,16 +57,16 @@ int main(int argc, char *argv[]) {
   ofstream outFile;
 
   //open inFile and check status
-  cout << "\nOpening the input file...\n\n";
+  std::cout << "\nOpening the input file...\n\n";
   inFile.open(inFileName);
   getline(inFile, line, '\n');
 
   //if the end of the file is reached, the file is empty
   if (inFile.eof()) {
-    cout << left << string(13, '*') << "Input File Is Empty" << string(13, '*');
-    cout << "==> The input file is empty.";
-    cout << "==> Terminating the program.";
-    cout << string(47, '*') << "\n\n";
+	  cout << left << string(13, '*') << "Input File Is Empty" << string(13, '*');
+	  cout << "==> The input file is empty.";
+	  cout << "==> Terminating the program.";
+	  cout << string(47, '*') << "\n\n";
 
     return 1;
   }
@@ -72,9 +75,9 @@ int main(int argc, char *argv[]) {
   while (!inFile) {
 
     //input file error message
-    cout << left << string(15, '*') << "File Open Error" << string(15, '*') << endl;
-    cout << "==> Input file failed to open properly!!\n";
-    cout << "==> Attempted to open file: " << inFileName << endl;
+	  cout << left << string(15, '*') << "File Open Error" << string(15, '*') << endl;
+	  cout << "==> Input file failed to open properly!!\n";
+	  cout << "==> Attempted to open file: " << inFileName << endl;
     cout << "==> Please try again...\n";
     cout << string(47,'*') << "\n\n";
 
