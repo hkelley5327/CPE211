@@ -186,7 +186,7 @@ int main(int argc, char *argv[]) {
   neitherPer = ((double)neitherTotal/(double)totalChar) * 100;
 
   //total and percent row on tables
-  outFile << string(40, '-');
+  outFile << string(40, '-') << endl;
   outFile << left << setw(15) << "Totals" << setw(10) << letterTotal << setw(10) << digitTotal << setw(10) << neitherTotal << totalChar << endl;
   outFile << left << fixed << setprecision(2) << setw(15) << "Percents" << setw(10) << letterPer << setw(10) << digitPer << setw(10) << neitherPer << "Total" << endl;
 
