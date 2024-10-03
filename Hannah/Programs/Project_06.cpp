@@ -147,6 +147,9 @@ int main(int argc, char *argv[]) {
       lineChCount++;
       totalChar++;
 
+      //line total
+      lineChCount++;
+
       if (isalpha(ch)) {
         //line totals
         lineLetter++;
