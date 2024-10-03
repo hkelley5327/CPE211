@@ -57,7 +57,7 @@ int main(int argc, char *argv[]) {
   ofstream outFile;
 
   //open inFile and check status
-  std::cout << "\nOpening the input file...\n\n";
+  cout << "\nOpening the input file...\n\n";
   inFile.open(inFileName);
   getline(inFile, line, '\n');
 

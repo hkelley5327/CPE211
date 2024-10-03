@@ -1,0 +1,708 @@
+Solution Comparison for Project_06
+------------------------------------
+
+                             #########################################################################
+                             #########################################################################
+                             ###  Testing input file: /home/work/cpe211data/Project_06/P6_in1.txt
+                             #########################################################################
+                             #########################################################################
+
+                                            ===================================
+                                            ===> Running STUDENTS solution <===
+                                            ===================================
+================== Start of Output ============================================
+
+Opening the input file...
+
+Opening the output file...
+
+==================== End of Output ============================================
+
+                                            ===================================
+                                            ===> Running PROVIDED solution <===
+                                            ===================================
+================== Start of Output ============================================
+
+Opening the input file...
+
+Opening the output file...
+
+==================== End of Output ============================================
+
+                                             ==========================================
+                                             ===> Side-By-Side Comparison of Output
+                                             ===> Input File: P6_in1.txt
+                                             ==========================================
+
+
+                                             #################################################################
+                                             ###
+                                             ###   There are 1 differences in the
+                                             ###   output generated for the input file.
+                                             ###
+                                             ###   The number shown may not be an exact count of
+                                             ###   the number of differences.
+                                             ###
+                                             ###   Some multiple line differences are combined and
+                                             ###   counted as a single difference. 
+                                             ###
+                                             ###   THE DIFFERENCE COUNT ABOVE MAY NOT INCLUDE ALL DIFFERENCES
+                                             ###
+                                             #################################################################
+
+Student program output                                                                                           Sample Solution Output
+----------------------                                                                                           ----------------------
+
+Opening the input file...									Opening the input file...
+
+Opening the output file...									Opening the output file...
+
+
+============================================							============================================
+Contents of output file are below this line							Contents of output file are below this line
+============================================							============================================
+Line Number    Letters   Digits    Other     Total						Line Number    Letters   Digits    Other     Total
+-----------    -------   -------   -----     -----					      |	-----------    -------   ------    -----     -----
+1              10        5         12        26						      |	1              0         5         1         6
+Totals         10        5         11        27						      |	2              0         5         1         6
+Percents       37.04     18.52     40.74     Total					      |	3              5         0         1         6
+											      >	4              5         0         1         6
+											      >	5              0         0         20        20
+											      >	--------------------------------------------------
+											      >	Totals         10        10        24        44
+											      >	Percent        22.73     22.73     54.55
+											      >
+=======  End Of Output File Contents =======							=======  End Of Output File Contents =======
+
+                             #########################################################################
+                             #########################################################################
+                             ###  Testing input file: /home/work/cpe211data/Project_06/P6_in2.txt
+                             #########################################################################
+                             #########################################################################
+
+                                            ===================================
+                                            ===> Running STUDENTS solution <===
+                                            ===================================
+================== Start of Output ============================================
+
+Opening the input file...
+
+Opening the output file...
+
+==================== End of Output ============================================
+
+                                            ===================================
+                                            ===> Running PROVIDED solution <===
+                                            ===================================
+================== Start of Output ============================================
+
+Opening the input file...
+
+Opening the output file...
+
+==================== End of Output ============================================
+
+                                             ==========================================
+                                             ===> Side-By-Side Comparison of Output
+                                             ===> Input File: P6_in2.txt
+                                             ==========================================
+
+
+                                             #################################################################
+                                             ###
+                                             ###   There are 1 differences in the
+                                             ###   output generated for the input file.
+                                             ###
+                                             ###   The number shown may not be an exact count of
+                                             ###   the number of differences.
+                                             ###
+                                             ###   Some multiple line differences are combined and
+                                             ###   counted as a single difference. 
+                                             ###
+                                             ###   THE DIFFERENCE COUNT ABOVE MAY NOT INCLUDE ALL DIFFERENCES
+                                             ###
+                                             #################################################################
+
+Student program output                                                                                           Sample Solution Output
+----------------------                                                                                           ----------------------
+
+Opening the input file...									Opening the input file...
+
+Opening the output file...									Opening the output file...
+
+
+============================================							============================================
+Contents of output file are below this line							Contents of output file are below this line
+============================================							============================================
+Line Number    Letters   Digits    Other     Total						Line Number    Letters   Digits    Other     Total
+-----------    -------   -------   -----     -----					      |	-----------    -------   ------    -----     -----
+1              46        15        9         69						      |	1              30        1         11        42
+Totals         46        15        8         70						      |	2              8         0         4         12
+Percents       65.71     21.43     11.43     Total					      |	3              27        2         9         38
+											      >	4              11        0         11        22
+											      >	5              0         12        9         21
+											      >	--------------------------------------------------
+											      >	Totals         76        15        44        135
+											      >	Percent        56.30     11.11     32.59
+											      >
+=======  End Of Output File Contents =======							=======  End Of Output File Contents =======
+
+                             #########################################################################
+                             #########################################################################
+                             ###  Testing input file: /home/work/cpe211data/Project_06/P6_in3.txt
+                             #########################################################################
+                             #########################################################################
+
+                                            ===================================
+                                            ===> Running STUDENTS solution <===
+                                            ===================================
+================== Start of Output ============================================
+
+Opening the input file...
+
+Opening the output file...
+
+==================== End of Output ============================================
+
+                                            ===================================
+                                            ===> Running PROVIDED solution <===
+                                            ===================================
+================== Start of Output ============================================
+
+Opening the input file...
+
+Opening the output file...
+
+==================== End of Output ============================================
+
+                                             ==========================================
+                                             ===> Side-By-Side Comparison of Output
+                                             ===> Input File: P6_in3.txt
+                                             ==========================================
+
+
+                                             #################################################################
+                                             ###
+                                             ###   There are 1 differences in the
+                                             ###   output generated for the input file.
+                                             ###
+                                             ###   The number shown may not be an exact count of
+                                             ###   the number of differences.
+                                             ###
+                                             ###   Some multiple line differences are combined and
+                                             ###   counted as a single difference. 
+                                             ###
+                                             ###   THE DIFFERENCE COUNT ABOVE MAY NOT INCLUDE ALL DIFFERENCES
+                                             ###
+                                             #################################################################
+
+Student program output                                                                                           Sample Solution Output
+----------------------                                                                                           ----------------------
+
+Opening the input file...									Opening the input file...
+
+Opening the output file...									Opening the output file...
+
+
+============================================							============================================
+Contents of output file are below this line							Contents of output file are below this line
+============================================							============================================
+Line Number    Letters   Digits    Other     Total						Line Number    Letters   Digits    Other     Total
+-----------    -------   -------   -----     -----					      |	-----------    -------   ------    -----     -----
+1              15        14        23        51						      |	1              0         1         1         2
+Totals         15        14        22        52						      |	2              0         2         1         3
+Percents       28.85     26.92     42.31     Total					      |	3              0         3         1         4
+											      >	4              0         4         1         5
+											      >	5              0         5         1         6
+											      >	6              1         0         1         2
+											      >	7              2         0         1         3
+											      >	8              3         0         1         4
+											      >	9              4         0         1         5
+											      >	10             5         0         1         6
+											      >	11             0         0         2         2
+											      >	12             0         0         3         3
+											      >	13             0         0         4         4
+											      >	14             0         0         5         5
+											      >	15             0         0         6         6
+											      >	16             0         0         7         7
+											      >	--------------------------------------------------
+											      >	Totals         15        15        37        67
+											      >	Percent        22.39     22.39     55.22
+											      >
+=======  End Of Output File Contents =======							=======  End Of Output File Contents =======
+
+                             #########################################################################
+                             #########################################################################
+                             ###  Testing input file: /home/work/cpe211data/Project_06/P6_in4.txt
+                             #########################################################################
+                             #########################################################################
+
+                                            ===================================
+                                            ===> Running STUDENTS solution <===
+                                            ===================================
+================== Start of Output ============================================
+
+Opening the input file...
+
+*************Input File Is Empty*************==> The input file is empty.==> Terminating the program.***********************************************
+
+==================== End of Output ============================================
+
+                                            ===================================
+                                            ===> Running PROVIDED solution <===
+                                            ===================================
+================== Start of Output ============================================
+
+Opening the input file...
+
+Opening the output file...
+
+************* Input File Is Empty *************
+==> The input file is empty.
+==> Terminating the program.
+***********************************************
+
+==================== End of Output ============================================
+
+                                             ==========================================
+                                             ===> Side-By-Side Comparison of Output
+                                             ===> Input File: P6_in4.txt
+                                             ==========================================
+
+
+                                             #################################################################
+                                             ###
+                                             ###   There are 1 differences in the
+                                             ###   output generated for the input file.
+                                             ###
+                                             ###   The number shown may not be an exact count of
+                                             ###   the number of differences.
+                                             ###
+                                             ###   Some multiple line differences are combined and
+                                             ###   counted as a single difference. 
+                                             ###
+                                             ###   THE DIFFERENCE COUNT ABOVE MAY NOT INCLUDE ALL DIFFERENCES
+                                             ###
+                                             #################################################################
+
+Student program output                                                                                           Sample Solution Output
+----------------------                                                                                           ----------------------
+
+Opening the input file...									Opening the input file...
+
+*************Input File Is Empty*************==> The input file is empty.==> Terminating the  |	Opening the output file...
+											      >
+											      >	************* Input File Is Empty *************
+											      >	==> The input file is empty.
+											      >	==> Terminating the program.
+											      >	***********************************************
+
+
+============================================							============================================
+Contents of output file are below this line							Contents of output file are below this line
+============================================							============================================
+=======  End Of Output File Contents =======							=======  End Of Output File Contents =======
+
+                             #########################################################################
+                             #########################################################################
+                             ###  Testing Invalid input file then correct
+                             ###  Testing Invalid Input File: Not/A/File.TXT
+                             ###  Testing input file: /home/work/cpe211data/Project_06/P6_in5.txt
+                             #########################################################################
+                             #########################################################################
+
+                                            ===================================
+                                            ===> Running STUDENTS solution <===
+                                            ===================================
+================== Start of Output ============================================
+
+Opening the input file...
+
+***************File Open Error***************
+==> Input file failed to open properly!!
+==> Attempted to open file: not/an/input/file.txt
+==> Please try again...
+***********************************************
+
+Enter in the name of the input file: 
+Opening the input file...
+***************File Open Error***************
+==> Input file failed to open properly!!
+==> Attempted to open file: Not/A/File.TXT
+==> Please try again...
+***********************************************
+
+Enter in the name of the input file: 
+Opening the input file...
+***************File Open Error***************
+==> Input file failed to open properly!!
+==> Attempted to open file: not/an/input/file.txt
+==> Please try again...
+***********************************************
+
+Enter in the name of the input file: 
+Opening the input file...
+Opening the output file...
+
+==================== End of Output ============================================
+
+                                            ===================================
+                                            ===> Running PROVIDED solution <===
+                                            ===================================
+==================== Start of Output ============================================
+
+Opening the input file...
+
+*************** File Open Error ***************
+==> Input file failed to open properly!!
+==> Attempted to open file: not/an/input/file.txt
+==> Please try again...
+***********************************************
+
+Enter in the name of the input file: Not/A/File.TXT
+
+*************** File Open Error ***************
+==> Input file failed to open properly!!
+==> Attempted to open file: Not/A/File.TXT
+==> Please try again...
+***********************************************
+
+Enter in the name of the input file: not/an/input/file.txt
+
+*************** File Open Error ***************
+==> Input file failed to open properly!!
+==> Attempted to open file: not/an/input/file.txt
+==> Please try again...
+***********************************************
+
+Enter in the name of the input file: /home/work/cpe211data/Project_06/P6_in5.txt
+
+Opening the output file...
+
+==================== End of Output ============================================
+
+                                             ==========================================
+                                             ===> Side-By-Side Comparison of Output
+                                             ===> Input File: P6_in5.txt
+                                             ==========================================
+
+
+                                             #################################################################
+                                             ###
+                                             ###   There are 5 differences in the
+                                             ###   output generated for the input file.
+                                             ###
+                                             ###   The number shown may not be an exact count of
+                                             ###   the number of differences.
+                                             ###
+                                             ###   Some multiple line differences are combined and
+                                             ###   counted as a single difference. 
+                                             ###
+                                             ###   THE DIFFERENCE COUNT ABOVE MAY NOT INCLUDE ALL DIFFERENCES
+                                             ###
+                                             #################################################################
+
+Student program output                                                                                           Sample Solution Output
+----------------------                                                                                           ----------------------
+
+Opening the input file...									Opening the input file...
+
+***************File Open Error***************						      |	*************** File Open Error ***************
+==> Input file failed to open properly!!							==> Input file failed to open properly!!
+==> Attempted to open file: not/an/input/file.txt						==> Attempted to open file: not/an/input/file.txt
+==> Please try again...										==> Please try again...
+***********************************************							***********************************************
+
+Enter in the name of the input file: 							      |	Enter in the name of the input file: Not/A/File.TXT
+Opening the input file...								      |
+***************File Open Error***************						      |	*************** File Open Error ***************
+==> Input file failed to open properly!!							==> Input file failed to open properly!!
+==> Attempted to open file: Not/A/File.TXT							==> Attempted to open file: Not/A/File.TXT
+==> Please try again...										==> Please try again...
+***********************************************							***********************************************
+
+Enter in the name of the input file: 							      |	Enter in the name of the input file: not/an/input/file.txt
+Opening the input file...								      |
+***************File Open Error***************						      |	*************** File Open Error ***************
+==> Input file failed to open properly!!							==> Input file failed to open properly!!
+==> Attempted to open file: not/an/input/file.txt						==> Attempted to open file: not/an/input/file.txt
+==> Please try again...										==> Please try again...
+***********************************************							***********************************************
+
+Enter in the name of the input file: 							      |	Enter in the name of the input file: /home/work/cpe211data/Project_06/P6_in5.txt
+Opening the input file...								      |
+Opening the output file...									Opening the output file...
+
+
+============================================							============================================
+Contents of output file are below this line							Contents of output file are below this line
+============================================							============================================
+Line Number    Letters   Digits    Other     Total						Line Number    Letters   Digits    Other     Total
+-----------    -------   -------   -----     -----					      |	-----------    -------   ------    -----     -----
+1              14        7         11        31						      |	1              0         0         1         1
+Totals         14        7         10        32						      |	2              0         0         1         1
+Percents       43.75     21.88     31.25     Total					      |	3              0         0         1         1
+											      >	4              14        0         1         15
+											      >	5              0         7         1         8
+											      >	6              0         0         10        10
+											      >	7              0         0         1         1
+											      >	8              0         0         1         1
+											      >	9              0         0         1         1
+											      >	10             0         0         1         1
+											      >	11             0         0         1         1
+											      >	12             0         0         1         1
+											      >	--------------------------------------------------
+											      >	Totals         14        7         21        42
+											      >	Percent        33.33     16.67     50.00
+											      >
+=======  End Of Output File Contents =======							=======  End Of Output File Contents =======
+
+                             #########################################################################
+                             #########################################################################
+                             ###  Testing input file: /home/work/cpe211data/Project_06/P6_in6.txt
+                             ###  Testing Invalid Output File
+                             ###  Testing Invalid Output File then correct
+                             #########################################################################
+                             #########################################################################
+
+                                            ===================================
+                                            ===> Running STUDENTS solution <===
+                                            ===================================
+==================== Start of Output ============================================
+
+Opening the input file...
+
+Opening the output file...
+
+***************File Open Error***************
+==> Output file failed to open properly!!
+==> Attempted to open file: Not/A/File.TXT
+==> Please try again...
+***********************************************
+
+Enter in the name of the output file: Opening the output file...
+
+***************File Open Error***************
+==> Output file failed to open properly!!
+==> Attempted to open file: Not/A/File.TXT
+==> Please try again...
+***********************************************
+
+Enter in the name of the output file: Opening the output file...
+
+***************File Open Error***************
+==> Output file failed to open properly!!
+==> Attempted to open file: not/an/input/file.txt
+==> Please try again...
+***********************************************
+
+Enter in the name of the output file: Opening the output file...
+
+==================== End of Output ============================================
+
+                                            ===================================
+                                            ===> Running PROVIDED solution <===
+                                            ===================================
+==================== Start of Output ============================================
+
+Opening the input file...
+
+Opening the output file...
+
+*************** File Open Error ***************
+==> Output file failed to open properly!!
+==> Attempted to open file: Not/A/File.TXT
+==> Please try again...
+***********************************************
+
+Enter in the name of the output file: Not/A/File.TXT
+
+*************** File Open Error ***************
+==> Output file failed to open properly!!
+==> Attempted to open file: Not/A/File.TXT
+==> Please try again...
+***********************************************
+
+Enter in the name of the output file: not/an/input/file.txt
+
+*************** File Open Error ***************
+==> Output file failed to open properly!!
+==> Attempted to open file: not/an/input/file.txt
+==> Please try again...
+***********************************************
+
+Enter in the name of the output file: Project_06_output6.txt
+
+==================== End of Output ============================================
+
+                                             ==========================================
+                                             ===> Side-By-Side Comparison of Output
+                                             ===> Input File: P6_in6.txt
+                                             ==========================================
+
+
+                                             #################################################################
+                                             ###
+                                             ###   There are 7 differences in the
+                                             ###   output generated for the input file.
+                                             ###
+                                             ###   The number shown may not be an exact count of
+                                             ###   the number of differences.
+                                             ###
+                                             ###   Some multiple line differences are combined and
+                                             ###   counted as a single difference. 
+                                             ###
+                                             ###   THE DIFFERENCE COUNT ABOVE MAY NOT INCLUDE ALL DIFFERENCES
+                                             ###
+                                             #################################################################
+
+Student program output                                                                                           Sample Solution Output
+----------------------                                                                                           ----------------------
+
+Opening the input file...									Opening the input file...
+
+Opening the output file...									Opening the output file...
+
+***************File Open Error***************						      |	*************** File Open Error ***************
+==> Output file failed to open properly!!							==> Output file failed to open properly!!
+==> Attempted to open file: Not/A/File.TXT							==> Attempted to open file: Not/A/File.TXT
+==> Please try again...										==> Please try again...
+***********************************************							***********************************************
+
+Enter in the name of the output file: Opening the output file...			      |	Enter in the name of the output file: Not/A/File.TXT
+
+***************File Open Error***************						      |	*************** File Open Error ***************
+==> Output file failed to open properly!!							==> Output file failed to open properly!!
+==> Attempted to open file: Not/A/File.TXT							==> Attempted to open file: Not/A/File.TXT
+==> Please try again...										==> Please try again...
+***********************************************							***********************************************
+
+Enter in the name of the output file: Opening the output file...			      |	Enter in the name of the output file: not/an/input/file.txt
+
+***************File Open Error***************						      |	*************** File Open Error ***************
+==> Output file failed to open properly!!							==> Output file failed to open properly!!
+==> Attempted to open file: not/an/input/file.txt						==> Attempted to open file: not/an/input/file.txt
+==> Please try again...										==> Please try again...
+***********************************************							***********************************************
+
+Enter in the name of the output file: Opening the output file...			      |	Enter in the name of the output file: Project_06_output6.txt
+
+
+============================================							============================================
+Contents of output file are below this line							Contents of output file are below this line
+============================================							============================================
+Line Number    Letters   Digits    Other     Total						Line Number    Letters   Digits    Other     Total
+-----------    -------   -------   -----     -----					      |	-----------    -------   ------    -----     -----
+1              14        7         11        31						      |	1              0         0         1         1
+Totals         14        7         10        32						      |	2              0         0         1         1
+Percents       43.75     21.88     31.25     Total					      |	3              0         0         1         1
+											      >	4              14        0         1         15
+											      >	5              0         7         1         8
+											      >	6              0         0         10        10
+											      >	7              0         0         1         1
+											      >	8              0         0         1         1
+											      >	9              0         0         1         1
+											      >	10             0         0         1         1
+											      >	11             0         0         1         1
+											      >	12             0         0         1         1
+											      >	--------------------------------------------------
+											      >	Totals         14        7         21        42
+											      >	Percent        33.33     16.67     50.00
+											      >
+=======  End Of Output File Contents =======							=======  End Of Output File Contents =======
+
+                             #########################################################################
+                             #########################################################################
+                             ###  Testing input file: /home/work/cpe211data/Project_06/P6_in7.txt
+                             ###  Testing Invalid Command Line Arguments
+                             #########################################################################
+                             #########################################################################
+
+                                            ===================================
+                                            ===> Running STUDENTS solution <===
+                                            ===================================
+==================== Start of Output ============================================
+Testing less than 2 command line arguments..
+
+********* Command Line Argument Error *********
+==> Incorrect number of Command Line Arguments!
+==> Command for running the program is:
+==> ./Project_05 inputFileName
+***********************************************
+
+Testing more than 2 command line arguments..
+
+********* Command Line Argument Error *********
+==> Incorrect number of Command Line Arguments!
+==> Command for running the program is:
+==> ./Project_05 inputFileName
+***********************************************
+
+==================== End of Output ============================================
+
+                                            ===================================
+                                            ===> Running PROVIDED solution <===
+                                            ===================================
+==================== Start of Output ============================================
+Testing less than 2 command line arguments..
+
+********* Command Line Argument Error *********
+==> Incorrect number of Command Line Arguments!
+==> Command for running the program is:
+==> ./Project_06 inputFileName outputFileName
+***********************************************
+
+Testing more than 2 command line arguments..
+
+********* Command Line Argument Error *********
+==> Incorrect number of Command Line Arguments!
+==> Command for running the program is:
+==> ./Project_06 inputFileName outputFileName
+***********************************************
+
+==================== End of Output ============================================
+
+                                             ==========================================
+                                             ===> Side-By-Side Comparison of Output
+                                             ===> Input File: P6_in7.txt
+                                             ==========================================
+
+
+                                             #################################################################
+                                             ###
+                                             ###   There are 2 differences in the
+                                             ###   output generated for the input file.
+                                             ###
+                                             ###   The number shown may not be an exact count of
+                                             ###   the number of differences.
+                                             ###
+                                             ###   Some multiple line differences are combined and
+                                             ###   counted as a single difference. 
+                                             ###
+                                             ###   THE DIFFERENCE COUNT ABOVE MAY NOT INCLUDE ALL DIFFERENCES
+                                             ###
+                                             #################################################################
+
+Student program output                                                                                           Sample Solution Output
+----------------------                                                                                           ----------------------
+Testing less than 2 command line arguments..							Testing less than 2 command line arguments..
+
+********* Command Line Argument Error *********							********* Command Line Argument Error *********
+==> Incorrect number of Command Line Arguments!							==> Incorrect number of Command Line Arguments!
+==> Command for running the program is:								==> Command for running the program is:
+==> ./Project_05 inputFileName								      |	==> ./Project_06 inputFileName outputFileName
+***********************************************							***********************************************
+
+Testing more than 2 command line arguments..							Testing more than 2 command line arguments..
+
+********* Command Line Argument Error *********							********* Command Line Argument Error *********
+==> Incorrect number of Command Line Arguments!							==> Incorrect number of Command Line Arguments!
+==> Command for running the program is:								==> Command for running the program is:
+==> ./Project_05 inputFileName								      |	==> ./Project_06 inputFileName outputFileName
+***********************************************							***********************************************
+
+
+============================================							============================================
+Contents of output file are below this line							Contents of output file are below this line
+============================================							============================================
+=======  End Of Output File Contents =======							=======  End Of Output File Contents =======

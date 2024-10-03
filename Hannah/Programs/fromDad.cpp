@@ -50,7 +50,7 @@ int main(int argc, char* argv[]) {
 
     // Output column headings
     outputFile << setw(15) << left << "Line Number" << setw(10) << left << "Letters" << setw(10) << left << "Digits" << setw(10) << left << "Other" << " Total" << endl;
-    outputFile << setw(15) << left << "-----------" << setw(10) << left << "-------" << setw(10) << left << "-------" << setw(10) << left << "-------" << " -----" << endl;
+    outputFile << setw(15) << left << "-----------" << setw(10) << left << "-------" << setw(10) << left << "------" << setw(10) << left << "-----" << " -----" << endl;
 
     // Initialize counters
     int lineNumber = 1;

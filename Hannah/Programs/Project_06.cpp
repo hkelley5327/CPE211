@@ -129,7 +129,6 @@ int main(int argc, char *argv[]) {
   while (inFile.good()) {
 
     int i = 0;
-    ch = line[i];
 
     //reset line totals
     lineLetter = 0;
@@ -142,33 +141,26 @@ int main(int argc, char *argv[]) {
 
     while ((ch != '\n') && inFile.good()) {
 
-      inFile >> ch;
+      ch = line[i];
+
+      //gloabl totals
+      lineChCount++;
+      totalChar++;
+
       if (isalpha(ch)) {
         //line totals
         lineLetter++;
         letterTotal++;
-
-        //gloabl totals
-        lineChCount++;
-        totalChar++;
       }
       else if (isdigit(ch)) {
         //line totals
         lineDigit++;
         digitTotal++;
-
-        //gloabl totals
-        lineChCount++;
-        totalChar++;
       }
       else {
         //line totals
         lineNeither++;
         neitherTotal++;
-
-        //gloabl totals
-        lineChCount++;
-        totalChar++;
 
         //for debugging purposes only
         //cout << numLine << "******" << endl << << "i- " << i << endl << lineLetter << endl << letterTotal << endl << lineChCount << endl << digitTotal << endl << lineNeither << endl << neitherTotal << endl << totalChar << endl << lineDigit << "\n\n";
@@ -192,7 +184,6 @@ int main(int argc, char *argv[]) {
   letterPer = ((double)letterTotal/(double)totalChar) * 100;
   digitPer = ((double)digitTotal/(double)totalChar) * 100;
   neitherPer = ((double)neitherTotal/(double)totalChar) * 100;
-
 
   //total and percent row on tables
   outFile << left << setw(15) << "Totals" << setw(10) << letterTotal << setw(10) << digitTotal << setw(10) << neitherTotal << totalChar << endl;
