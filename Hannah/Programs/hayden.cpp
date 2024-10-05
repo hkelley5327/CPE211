@@ -195,7 +195,7 @@ int main(int argc, char *argv[]) {
   //total and percent row on tables
   outFile << string(50, '-')<< endl;
   outFile << left << setw(15) << "Totals" << setw(10) << totalLetters << setw(10) << totalDigits << setw(10) << totalNeither << totalChar << endl;
-  outFile << left << fixed << setprecision(2) << setw(15) << "Percent" << setw(10) << letterPer << setw(10) << digitPer << setw(10) << neitherPer << "\n\n";
+  outFile << left << fixed << setprecision(2) << setw(15) << "Percent" << setw(10) << letterPer << setw(10) << digitPer << neitherPer << "\n\n";
 
   //close input and output files
   inFile.close();
