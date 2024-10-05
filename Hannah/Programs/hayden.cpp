@@ -59,12 +59,14 @@ int main(int argc, char *argv[]) {
   inFile.open(inFileName);
   getline(inFile, line, '\n');
 
-  //open outFile and check status
-  cout << "Opening the output file...\n\n";
-  outFile.open(outFileName.c_str());
+  //if inFile is open and good, open outFile and check status
+  if (inFile) {
+    cout << "Opening the output file...\n\n";
+    outFile.open(outFileName.c_str());
 
-  //test outFile with header
-  outFile << left << setw(15);
+    //test outFile with header
+    outFile << left << setw(15);
+  }
 
   //if the end of the input file is reached, the file is empty
   if (inFile.eof()) {
@@ -92,12 +94,19 @@ int main(int argc, char *argv[]) {
     //prompt for and read in a different inFileName
     cout << "Enter in the name of the input file: ";
     cin >> inFileName;
-    cout << inFileName << endl;
+    cout << inFileName << "\n\n";
 
     //open inFile and check status
     inFile.open(inFileName);
     getline(inFile, line, '\n');
   }
+
+  //open output file and test
+  cout << "Opening the output file...\n\n";
+  outFile.open(outFileName.c_str());
+
+  //test outFile with header
+  outFile << left << setw(15);
 
   //check status of outFile
   while (!outFile) {
