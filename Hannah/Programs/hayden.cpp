@@ -59,6 +59,16 @@ int main(int argc, char *argv[]) {
   inFile.open(inFileName);
   getline(inFile, line, '\n');
 
+  //if the end of the file is reached, the file is empty
+  if (inFile.eof()) {
+    cout << left << string(13, '*') << "Input File Is Empty" << string(13, '*') << endl;
+    cout << "==> The input file is empty." << endl;
+    cout << "==> Terminating the program." << endl;
+    cout << string(47, '*') << "\n\n" << endl;
+
+    return 1;
+  }
+
   //if in fail state, run loop until no longer in fail state
   while (!inFile) {
 
@@ -108,16 +118,6 @@ int main(int argc, char *argv[]) {
 
     //test outFile with header
     outFile << left << setw(15) << "Line Number" << setw(10) << "Letters" << setw(10) << "Digits" << setw(10) << "Other" << "Total" << endl;
-  }
-
-  //if the end of the file is reached, the file is empty
-  if (inFile.eof()) {
-    cout << left << string(13, '*') << "Input File Is Empty" << string(13, '*') << endl;
-    cout << "==> The input file is empty." << endl;
-    cout << "==> Terminating the program." << endl;
-    cout << string(47, '*') << "\n\n" << endl;
-
-    return 1;
   }
 
   //start outputting info to outFile
@@ -197,7 +197,7 @@ int main(int argc, char *argv[]) {
 
 
   //total and percent row on tables
-  outFile << string(50, '-')<< endl;
+  outFile << string(45, '-')<< endl;
   outFile << left << setw(15) << "Totals" << setw(10) << totalLetters << setw(10) << totalDigits << setw(10) << totalNeither << totalChar << endl;
   outFile << left << fixed << setprecision(2) << setw(15) << "Percent" << setw(10) << letterPer << setw(10) << digitPer << setw(10) << neitherPer << "\n\n";
 
