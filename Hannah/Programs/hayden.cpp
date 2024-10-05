@@ -59,12 +59,19 @@ int main(int argc, char *argv[]) {
   inFile.open(inFileName);
   getline(inFile, line, '\n');
 
-  //if the end of the file is reached, the file is empty
+  //open outFile and check status
+  cout << "Opening the output file...\n\n";
+  outFile.open(outFileName.c_str());
+
+  //test outFile with header
+  outFile << left << setw(15);
+
+  //if the end of the input file is reached, the file is empty
   if (inFile.eof()) {
-    cout << left << string(13, '*') << "Input File Is Empty" << string(13, '*') << endl;
+    cout << left << string(13, '*') << " Input File Is Empty " << string(13, '*') << endl;
     cout << "==> The input file is empty." << endl;
     cout << "==> Terminating the program." << endl;
-    cout << string(47, '*') << "\n\n" << endl;
+    cout << string(47, '*') << endl << endl;
 
     return 1;
   }
@@ -92,14 +99,7 @@ int main(int argc, char *argv[]) {
     getline(inFile, line, '\n');
   }
 
-  //open outFile and check status
-  cout << "Opening the output file...\n\n";
-  outFile.open(outFileName.c_str());
-
-  //test outFile with header
-  outFile << left << setw(15) << "Line Number" << setw(10) << "Letters" << setw(10) << "Digits" << setw(10) << "Other" << "Total" << endl;
-
-  //check status
+  //check status of outFile
   while (!outFile) {
 
     //output file error message
@@ -118,12 +118,13 @@ int main(int argc, char *argv[]) {
     outFile.open(outFileName.c_str());
 
     //test outFile with header
-    outFile << left << setw(15) << "Line Number" << setw(10) << "Letters" << setw(10) << "Digits" << setw(10) << "Other" << "Total" << endl;
+    outFile << left << setw(15);
   }
 
   //start outputting info to outFile
 
   //start of table
+  outFile << left << setw(15) << "Line Number" << setw(10) << "Letters" << setw(10) << "Digits" << setw(10) << "Other" << "Total" << endl;
   outFile << left << setw(15) << string(11, '-') << setw(10) << string(7, '-') << setw(10) << string(6, '-') << setw(10) << string(5, '-') << string(5, '-') << endl;
 
   //while the end of the file has not been reached
