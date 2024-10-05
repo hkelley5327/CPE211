@@ -15,6 +15,7 @@
 #include <iomanip>
 #include <cctype>
 #include <fstream>
+#include <string>
 
 using namespace std;
 
@@ -26,8 +27,9 @@ int main(int argc, char *argv[]) {
   int lineDigit = 0;
   int lineNeither = 0;
 
-  int numLine = 0;        //global Totals
-  int letterTotal = 0;
+  int numLine = 0;
+
+  int letterTotal = 0;    //global Totals
   int digitTotal = 0;
   int neitherTotal = 0;
   int totalChar = 0;
@@ -139,11 +141,11 @@ int main(int argc, char *argv[]) {
     //add one to the total number of lines
     numLine++;
 
-    while ((ch != '\n') && inFile.good()) {
+    while (i <= (line.lenght() - 1) && inFile.good()) {
 
       ch = line[i];
 
-      //gloabl totals
+      //global totals
       lineChCount++;
       totalChar++;
 
