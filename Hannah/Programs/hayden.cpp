@@ -61,10 +61,10 @@ int main(int argc, char *argv[]) {
 
   //if the end of the file is reached, the file is empty
   if (inFile.eof()) {
-    cout << left << string(13, '*') << "Input File Is Empty" << string(13, '*');
-    cout << "==> The input file is empty.";
-    cout << "==> Terminating the program.";
-    cout << string(47, '*') << "\n\n";
+    cout << left << string(13, '*') << "Input File Is Empty" << string(13, '*') << endl;
+    cout << "==> The input file is empty." << endl;
+    cout << "==> Terminating the program." << endl;
+    cout << string(47, '*') << "\n\n" << endl;
 
     return 1;
   }
@@ -87,7 +87,6 @@ int main(int argc, char *argv[]) {
     cin >> inFileName;
 
     //open inFile and check status
-    cout << "\nOpening the input file...\n";
     inFile.open(inFileName);
     getline(inFile, line, '\n');
   }
@@ -112,9 +111,9 @@ int main(int argc, char *argv[]) {
     //prompt for and read in a different outFileName
     cout << "Enter in the name of the output file: ";
     cin >> outFileName;
+    cout << outFileName << "\n";
 
     //open outFile and check status
-    cout << "Opening the output file...\n\n";
     outFile.open(outFileName.c_str());
 
     //test outFile with header
@@ -124,7 +123,7 @@ int main(int argc, char *argv[]) {
   //start outputting info to outFile
 
   //start of table
-  outFile << left << setw(15) << string(11, '-') << setw(10) << string(7, '-') << setw(10) << string(7, '-') << setw(10) << string(5, '-') << string(5, '-') << endl;
+  outFile << left << setw(15) << string(11, '-') << setw(10) << string(7, '-') << setw(10) << string(6, '-') << setw(10) << string(5, '-') << string(5, '-') << endl;
 
   //while the end of the file has not been reached
   while (inFile.good()) {
@@ -199,7 +198,7 @@ int main(int argc, char *argv[]) {
 
   //total and percent row on tables
   outFile << left << setw(15) << "Totals" << setw(10) << totalLetters << setw(10) << totalDigits << setw(10) << totalNeither << totalChar << endl;
-  outFile << left << fixed << setprecision(2) << setw(15) << "Percents" << setw(10) << letterPer << setw(10) << digitPer << setw(10) << neitherPer << "Total" << endl;
+  outFile << left << fixed << setprecision(2) << setw(15) << "Percent" << setw(10) << letterPer << setw(10) << digitPer << setw(10) << neitherPer << "\n\n";
 
   //close input and output files
   inFile.close();
