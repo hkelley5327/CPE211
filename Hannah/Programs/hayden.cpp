@@ -73,7 +73,7 @@ int main(int argc, char *argv[]) {
   while (!inFile) {
 
     //input file error message
-    cout << left << string(15, '*') << "File Open Error" << string(15, '*') << endl;
+    cout << left << string(15, '*') << " File Open Error " << string(15, '*') << endl;
     cout << "==> Input file failed to open properly!!\n";
     cout << "==> Attempted to open file: " << inFileName << endl;
     cout << "==> Please try again...\n";
@@ -85,6 +85,7 @@ int main(int argc, char *argv[]) {
     //prompt for and read in a different inFileName
     cout << "Enter in the name of the input file: ";
     cin >> inFileName;
+    cout << inFileName << endl;
 
     //open inFile and check status
     inFile.open(inFileName);
