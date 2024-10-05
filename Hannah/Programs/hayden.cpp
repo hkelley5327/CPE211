@@ -43,7 +43,7 @@ int main(int argc, char *argv[]) {
     cout << string(9,'*') << " Command Line Argument Error " << string(9,'*') << endl;
     cout << "==> Incorrect number of Command Line Arguments!\n";
     cout << "==> Command for running the program is:\n";
-    cout << "==> ./Project_05 inputFileName\n";
+    cout << "==> ./Project_06 inputFileName outputFileName\n";
     cout << string(47,'*') << endl << endl;
     return 1;
   }
@@ -58,13 +58,6 @@ int main(int argc, char *argv[]) {
   cout << "\nOpening the input file...\n\n";
   inFile.open(inFileName);
   getline(inFile, line, '\n');
-
-  //open outFile and check status
-  cout << "Opening the output file...\n\n";
-  outFile.open(outFileName.c_str());
-
-  //test outFile with header
-  outFile << left << setw(15);
 
   //if the end of the input file is reached, the file is empty
   if (inFile.eof()) {
@@ -92,12 +85,19 @@ int main(int argc, char *argv[]) {
     //prompt for and read in a different inFileName
     cout << "Enter in the name of the input file: ";
     cin >> inFileName;
-    cout << inFileName << endl;
+    cout << inFileName << "\n\n";
 
     //open inFile and check status
     inFile.open(inFileName);
     getline(inFile, line, '\n');
   }
+
+  //open outFile and check status
+  cout << "Opening the output file...\n\n";
+  outFile.open(outFileName.c_str());
+
+  //test outFile with header
+  outFile << left << setw(15);
 
   //check status of outFile
   while (!outFile) {
@@ -165,9 +165,6 @@ int main(int argc, char *argv[]) {
 
         //gloabl totals
         totalChar++;
-
-        //for debugging purposes only
-        //cout << lineIndex << "******" << endl << << "i- " << i << endl << lineLetter << endl << totalLetters << endl << lineChCount << endl << totalDigits << endl << lineNeither << endl << totalNeither << endl << totalChar << endl << lineDigit << "\n\n";
       }
 
       i++;
@@ -183,20 +180,17 @@ int main(int argc, char *argv[]) {
     totalDigits += lineDigit;
     totalNeither += lineNeither;
 
-
+    //output to table
     outFile << left << setw(15) << lineIndex << setw(10) << lineLetter << setw(10) << lineDigit << setw(10) << lineNeither <<  (lineLetter + lineDigit + lineNeither) << endl;
 
     //read in next line before looping back
     getline(inFile, line, '\n');
   }
 
-
-
   //calculate percentages
   letterPer = ((double)totalLetters/(double)totalChar) * 100;
   digitPer = ((double)totalDigits/(double)totalChar) * 100;
   neitherPer = ((double)totalNeither/(double)totalChar) * 100;
-
 
   //total and percent row on tables
   outFile << string(50, '-')<< endl;
