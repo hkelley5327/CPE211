@@ -141,7 +141,7 @@ int main(int argc, char *argv[]) {
     //add one to the total number of lines
     numLine++;
 
-    while (i <= (line.lenght() - 1) && inFile.good()) {
+    while (i <= (line.length() - 1) && inFile.good()) {
 
       ch = line[i];
 
