@@ -86,9 +86,9 @@ int main(int argc, char *argv[]) {
     //prompt for and read in a different inFileName
     cout << "Enter in the name of the input file: ";
     cin >> inFileName;
+    cout << inFileName << "\n\n";
 
     //open inFile and check status
-    cout << "\nOpening the input file...\n";
     inFile.open(inFileName);
     getline(inFile, line, '\n');
   }
@@ -98,7 +98,7 @@ int main(int argc, char *argv[]) {
   outFile.open(outFileName.c_str());
 
   //test outFile with header
-  outFile << left << setw(15) << "Line Number" << setw(10) << "Letters" << setw(10) << "Digits" << setw(10) << "Other" << "Total" << endl;
+  outFile << left << setw(15);
 
   //check status
   while (!outFile) {
@@ -113,18 +113,19 @@ int main(int argc, char *argv[]) {
     //prompt for and read in a different outFileName
     cout << "Enter in the name of the output file: ";
     cin >> outFileName;
+    cout << outFileName << "\n\n";
 
     //open outFile and check status
-    cout << "Opening the output file...\n\n";
     outFile.open(outFileName.c_str());
 
     //test outFile with header
-    outFile << left << setw(15) << "Line Number" << setw(10) << "Letters" << setw(10) << "Digits" << setw(10) << "Other" << "Total" << endl;
+    outFile << left << setw(15);
   }
 
   //start outputting info to outFile
 
   //start of table
+  outFile << left << setw(15) << "Line Number" << setw(10) << "Letters" << setw(10) << "Digits" << setw(10) << "Other" << "Total" << endl;
   outFile << left << setw(15) << string(11, '-') << setw(10) << string(7, '-') << setw(10) << string(6, '-') << setw(10) << string(5, '-') << string(5, '-') << endl;
 
   //while the end of the file has not been reached
@@ -145,30 +146,26 @@ int main(int argc, char *argv[]) {
 
       ch = line[i];
 
-      //global totals
-      lineChCount++;
-      totalChar++;
-
-      //line total
-      lineChCount++;
-
       if (isalpha(ch)) {
         //line totals
         lineLetter++;
-        letterTotal++;
+
+        //global totals
+        totalChar++;
       }
       else if (isdigit(ch)) {
         //line totals
         lineDigit++;
-        digitTotal++;
+
+        //gloabl totals
+        totalChar++;
       }
       else {
         //line totals
         lineNeither++;
-        neitherTotal++;
 
-        //for debugging purposes only
-        //cout << numLine << "******" << endl << << "i- " << i << endl << lineLetter << endl << letterTotal << endl << lineChCount << endl << digitTotal << endl << lineNeither << endl << neitherTotal << endl << totalChar << endl << lineDigit << "\n\n";
+        //gloabl totals
+        totalChar++;
       }
 
       i++;
@@ -179,6 +176,12 @@ int main(int argc, char *argv[]) {
     lineNeither++;
     totalChar++;
 
+    // Update overall totals
+    totalLetters += lineLetter;
+    totalDigits += lineDigit;
+    totalNeither += lineNeither;
+
+    //output to table
     outFile << left << setw(15) << numLine << setw(10) << lineLetter << setw(10) << lineDigit << setw(10) << lineNeither <<  lineChCount << endl;
 
     //read in next line before looping back
