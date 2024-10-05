@@ -15,7 +15,7 @@
 #include <iomanip>
 #include <cctype>
 #include <fstream>
-#include <string>
+//#include <>
 
 using namespace std;
 
@@ -27,9 +27,8 @@ int main(int argc, char *argv[]) {
   int lineDigit = 0;
   int lineNeither = 0;
 
-  int lineIndex = 0;
-
-  int totalLetters = 0;   //global otals
+  int lineIndex = 0;        //Totals
+  int totalLetters = 0;
   int totalDigits = 0;
   int totalNeither = 0;
   int totalChar = 0;
