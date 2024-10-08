@@ -57,17 +57,6 @@ int main(int argc, char *argv[]) {
   //open inFile and check status
   cout << "\nOpening the input file...\n\n";
   inFile.open(inFileName);
-  getline(inFile, line, '\n');
-
-  //if the end of the input file is reached, the file is empty
-  if (inFile.eof()) {
-    cout << left << string(13, '*') << " Input File Is Empty " << string(13, '*') << endl;
-    cout << "==> The input file is empty." << endl;
-    cout << "==> Terminating the program." << endl;
-    cout << string(47, '*') << endl << endl;
-
-    return 1;
-  }
 
   //if in fail state, run loop until no longer in fail state
   while (!inFile) {
@@ -92,9 +81,21 @@ int main(int argc, char *argv[]) {
     getline(inFile, line, '\n');
   }
 
+  //if the end of the input file is reached, the file is empty
+  if (inFile.eof()) {
+    cout << left << string(13, '*') << " Input File Is Empty " << string(13, '*') << endl;
+    cout << "==> The input file is empty." << endl;
+    cout << "==> Terminating the program." << endl;
+    cout << string(47, '*') << endl << endl;
+
+    return 1;
+  }
+
   //open outFile and check status
   cout << "Opening the output file...\n\n";
   outFile.open(outFileName.c_str());
+  getline(inFile, line, '\n');
+
 
   //test outFile with header
   outFile << left << setw(15);
@@ -129,6 +130,8 @@ int main(int argc, char *argv[]) {
 
   //while the end of the file has not been reached
   while (inFile.good()) {
+
+    getline(inFile, line, '\n');
 
     int i = 0;
 
@@ -184,7 +187,7 @@ int main(int argc, char *argv[]) {
     outFile << left << setw(15) << lineIndex << setw(10) << lineLetter << setw(10) << lineDigit << setw(10) << lineNeither <<  (lineLetter + lineDigit + lineNeither) << endl;
 
     //read in next line before looping back
-    getline(inFile, line, '\n');
+
   }
 
   //calculate percentages
