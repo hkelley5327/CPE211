@@ -45,6 +45,7 @@ int main(int argc, char *argv[]) {
     cout << "==> Command for running the program is:\n";
     cout << "==> ./Project_06 inputFileName outputFileName\n";
     cout << string(47,'*') << endl << endl;
+
     return 1;
   }
 
@@ -78,8 +79,6 @@ int main(int argc, char *argv[]) {
 
     //open inFile and check status
     inFile.open(inFileName);
-    //getline(inFile, line, '\n');
-    //inFile.get(ch);
   }
 
   cout << "Opening the output file...\n\n";
@@ -107,8 +106,9 @@ int main(int argc, char *argv[]) {
     outFile << left << setw(15);
   }
 
+  //read in a character from the input file
   inFile.get(ch);
-  //getline(inFile, line, "\n");
+
   //if the end of the input file is reached, the file is empty
   if (inFile.eof()) {
     cout << left << string(13, '*') << " Input File Is Empty " << string(13, '*') << endl;
@@ -119,14 +119,8 @@ int main(int argc, char *argv[]) {
     return 1;
   }
 
-  //open outFile and check status
-  //cout << "Opening the output file...\n\n";
-  //outFile.open(outFileName.c_str());
-  //getline(inFile, line, '\n');
-
   //test outFile with header
   outFile << left << setw(15);
-
 
   //start outputting info to outFile
 
@@ -136,10 +130,6 @@ int main(int argc, char *argv[]) {
 
   //while the end of the file has not been reached
   while (inFile.good()) {
-
-    //getline(inFile, line, '\n');
-
-    //int i = 0;
 
     //reset line totals
     lineLetter = 0;
@@ -151,8 +141,6 @@ int main(int argc, char *argv[]) {
     lineIndex++;
 
     while (ch != '\n') {
-
-      //ch = line[i];
 
       if (isalpha(ch)) {
         //line totals
@@ -176,8 +164,6 @@ int main(int argc, char *argv[]) {
         totalChar++;
       }
       inFile.get(ch);
-      //ch = line[i];
-      //i++;
 
     }
     //getline(inFile, line, '\n');

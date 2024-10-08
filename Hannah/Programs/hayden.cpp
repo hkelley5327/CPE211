@@ -45,6 +45,7 @@ int main(int argc, char *argv[]) {
     cout << "==> Command for running the program is:\n";
     cout << "==> ./Project_06 inputFileName outputFileName\n";
     cout << string(47,'*') << endl << endl;
+
     return 1;
   }
 
