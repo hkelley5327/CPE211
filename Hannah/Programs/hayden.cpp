@@ -61,7 +61,7 @@ int main(int argc, char *argv[]) {
 
   //if the end of the file is reached, the file is empty
   if (inFile.eof()) {
-    cout << "opening the output file...\n\n"
+    cout << "opening the output file...\n\n";
 
     cout << left << string(13, '*') << " Input File Is Empty " << string(13, '*') << endl;
     cout << "==> The input file is empty." << endl;
