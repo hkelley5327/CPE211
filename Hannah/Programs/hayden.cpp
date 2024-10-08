@@ -61,7 +61,7 @@ int main(int argc, char *argv[]) {
 
   //if the end of the file is reached, the file is empty
   if (inFile.eof()) {
-    cout << "opening the output file...\n\n";
+    cout << "Opening the output file...\n\n";
 
     cout << left << string(13, '*') << " Input File Is Empty " << string(13, '*') << endl;
     cout << "==> The input file is empty." << endl;
@@ -87,7 +87,7 @@ int main(int argc, char *argv[]) {
     //prompt for and read in a different inFileName
     cout << "Enter in the name of the input file: ";
     cin >> inFileName;
-    cout << "\n\n";
+    cout << inFileName << "\n\n";
 
     //open inFile and check status
     inFile.open(inFileName);
@@ -105,7 +105,7 @@ int main(int argc, char *argv[]) {
   while (!outFile) {
 
     //output file error message
-    cout << left << string(15, '*') << "File Open Error" << string(15, '*') << endl;
+    cout << left << string(15, '*') << " File Open Error " << string(15, '*') << endl;
     cout << "==> Output file failed to open properly!!\n";
     cout << "==> Attempted to open file: " << outFileName << endl;
     cout << "==> Please try again...\n";
@@ -114,6 +114,7 @@ int main(int argc, char *argv[]) {
     //prompt for and read in a different outFileName
     cout << "Enter in the name of the output file: ";
     cin >> outFileName;
+    cout << outFileName << "\n\n";
 
     //open outFile and check status
     cout << "Opening the output file...\n\n";
