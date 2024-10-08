@@ -45,6 +45,7 @@ int main(int argc, char *argv[]) {
     cout << "==> Command for running the program is:\n";
     cout << "==> ./Project_06 inputFileName outputFileName\n";
     cout << string(47,'*') << endl << endl;
+
     return 1;
   }
 
@@ -57,7 +58,6 @@ int main(int argc, char *argv[]) {
   //open inFile and check status
   cout << "\nOpening the input file...\n\n";
   inFile.open(inFileName);
-  getline(inFile, line, '\n');
 
   //if in fail state, run loop until no longer in fail state
   while (!inFile) {
@@ -79,25 +79,10 @@ int main(int argc, char *argv[]) {
 
     //open inFile and check status
     inFile.open(inFileName);
-    getline(inFile, line, '\n');
   }
 
-  //if the end of the input file is reached, the file is empty
-  if (inFile.eof()) {
-    cout << left << string(13, '*') << " Input File Is Empty " << string(13, '*') << endl;
-    cout << "==> The input file is empty." << endl;
-    cout << "==> Terminating the program." << endl;
-    cout << string(47, '*') << endl << endl;
-
-    return 1;
-  }
-
-  //open outFile and check status
   cout << "Opening the output file...\n\n";
   outFile.open(outFileName.c_str());
-
-  //test outFile with header
-  outFile << left << setw(15);
 
   //check status of outFile
   while (!outFile) {
@@ -121,6 +106,22 @@ int main(int argc, char *argv[]) {
     outFile << left << setw(15);
   }
 
+  //read in a character from the input file
+  inFile.get(ch);
+
+  //if the end of the input file is reached, the file is empty
+  if (inFile.eof()) {
+    cout << left << string(13, '*') << " Input File Is Empty " << string(13, '*') << endl;
+    cout << "==> The input file is empty." << endl;
+    cout << "==> Terminating the program." << endl;
+    cout << string(47, '*') << endl << endl;
+
+    return 1;
+  }
+
+  //test outFile with header
+  outFile << left << setw(15);
+
   //start outputting info to outFile
 
   //start of table
@@ -129,8 +130,6 @@ int main(int argc, char *argv[]) {
 
   //while the end of the file has not been reached
   while (inFile.good()) {
-
-    int i = 0;
 
     //reset line totals
     lineLetter = 0;
@@ -141,9 +140,7 @@ int main(int argc, char *argv[]) {
     //add one to the total number of lines
     lineIndex++;
 
-    while ((i < line.length()) && inFile.good()) {
-
-      ch = line[i];
+    while (ch != '\n') {
 
       if (isalpha(ch)) {
         //line totals
@@ -166,10 +163,10 @@ int main(int argc, char *argv[]) {
         //gloabl totals
         totalChar++;
       }
-
-      i++;
+      inFile.get(ch);
 
     }
+    //getline(inFile, line, '\n');
 
     //new line character isn't counted, so increment the total and line total by one to account for it
     lineNeither++;
@@ -184,7 +181,8 @@ int main(int argc, char *argv[]) {
     outFile << left << setw(15) << lineIndex << setw(10) << lineLetter << setw(10) << lineDigit << setw(10) << lineNeither <<  (lineLetter + lineDigit + lineNeither) << endl;
 
     //read in next line before looping back
-    getline(inFile, line, '\n');
+    inFile.get(ch);
+
   }
 
   //calculate percentages
