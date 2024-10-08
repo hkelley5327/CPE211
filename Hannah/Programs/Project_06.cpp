@@ -59,16 +59,6 @@ int main(int argc, char *argv[]) {
   inFile.open(inFileName);
   getline(inFile, line, '\n');
 
-  //if the end of the input file is reached, the file is empty
-  if (inFile.eof()) {
-    cout << left << string(13, '*') << " Input File Is Empty " << string(13, '*') << endl;
-    cout << "==> The input file is empty." << endl;
-    cout << "==> Terminating the program." << endl;
-    cout << string(47, '*') << endl << endl;
-
-    return 1;
-  }
-
   //if in fail state, run loop until no longer in fail state
   while (!inFile) {
 
@@ -119,6 +109,16 @@ int main(int argc, char *argv[]) {
 
     //test outFile with header
     outFile << left << setw(15);
+  }
+
+  //if the end of the input file is reached, the file is empty
+  if (inFile.eof()) {
+    cout << left << string(13, '*') << " Input File Is Empty " << string(13, '*') << endl;
+    cout << "==> The input file is empty." << endl;
+    cout << "==> Terminating the program." << endl;
+    cout << string(47, '*') << endl << endl;
+
+    return 1;
   }
 
   //start outputting info to outFile
