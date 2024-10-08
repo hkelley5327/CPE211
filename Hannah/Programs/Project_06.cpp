@@ -57,9 +57,10 @@ int main(int argc, char *argv[]) {
   //open inFile and check status
   cout << "\nOpening the input file...\n\n";
   inFile.open(inFileName);
-  //getline(inFile, line, '\n');
+  getline(inFile, line, '\n');
 
   cout << "Opening the output file...\n\n";
+  outFile.open(outFileName.c_str());
 
   //if the end of the input file is reached, the file is empty
   if (inFile.eof()) {
@@ -96,7 +97,7 @@ int main(int argc, char *argv[]) {
 
   //open outFile and check status
 
-  outFile.open(outFileName.c_str());
+
 
   //test outFile with header
   outFile << left << setw(15);
