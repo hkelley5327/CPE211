@@ -11,11 +11,11 @@
 // ****************************************
 
 //include necessary header files
-#include <iostream>             // for cout and cin
-#include <iomanip>              // for setw and justifications
-#include <cctype>               // for isalpha() and isdigit()
-#include <fstream>              // for reading from i/o files
-#include <string>               // for length()
+#include <iostream>
+#include <iomanip>
+#include <cctype>
+#include <fstream>
+//#include <>
 
 using namespace std;
 
@@ -43,7 +43,7 @@ int main(int argc, char *argv[]) {
     cout << string(9,'*') << " Command Line Argument Error " << string(9,'*') << endl;
     cout << "==> Incorrect number of Command Line Arguments!\n";
     cout << "==> Command for running the program is:\n";
-    cout << "==> ./Project_06 inputFileName outputFileName\n";
+    cout << "==> ./Project_05 inputFileName\n";
     cout << string(47,'*') << endl << endl;
     return 1;
   }
@@ -59,11 +59,21 @@ int main(int argc, char *argv[]) {
   inFile.open(inFileName);
   getline(inFile, line, '\n');
 
+  //if the end of the file is reached, the file is empty
+  if (inFile.eof()) {
+    cout << left << string(13, '*') << "Input File Is Empty" << string(13, '*');
+    cout << "==> The input file is empty.";
+    cout << "==> Terminating the program.";
+    cout << string(47, '*') << "\n\n";
+
+    return 1;
+  }
+
   //if in fail state, run loop until no longer in fail state
   while (!inFile) {
 
     //input file error message
-    cout << left << string(15, '*') << " File Open Error " << string(15, '*') << endl;
+    cout << left << string(15, '*') << "File Open Error" << string(15, '*') << endl;
     cout << "==> Input file failed to open properly!!\n";
     cout << "==> Attempted to open file: " << inFileName << endl;
     cout << "==> Please try again...\n";
@@ -75,21 +85,11 @@ int main(int argc, char *argv[]) {
     //prompt for and read in a different inFileName
     cout << "Enter in the name of the input file: ";
     cin >> inFileName;
-    cout << inFileName << "\n\n";
 
     //open inFile and check status
+    cout << "\nOpening the input file...\n";
     inFile.open(inFileName);
     getline(inFile, line, '\n');
-  }
-
-  //if the end of the input file is reached, the file is empty
-  if (inFile.eof()) {
-    cout << left << string(13, '*') << " Input File Is Empty " << string(13, '*') << endl;
-    cout << "==> The input file is empty." << endl;
-    cout << "==> Terminating the program." << endl;
-    cout << string(47, '*') << endl << endl;
-
-    return 1;
   }
 
   //open outFile and check status
@@ -97,13 +97,13 @@ int main(int argc, char *argv[]) {
   outFile.open(outFileName.c_str());
 
   //test outFile with header
-  outFile << left << setw(15);
+  outFile << left << setw(15) << "Line Number" << setw(10) << "Letters" << setw(10) << "Digits" << setw(10) << "Other" << "Total" << endl;
 
-  //check status of outFile
+  //check status
   while (!outFile) {
 
     //output file error message
-    cout << left << string(15, '*') << " File Open Error " << string(15, '*') << endl;
+    cout << left << string(15, '*') << "File Open Error" << string(15, '*') << endl;
     cout << "==> Output file failed to open properly!!\n";
     cout << "==> Attempted to open file: " << outFileName << endl;
     cout << "==> Please try again...\n";
@@ -112,20 +112,19 @@ int main(int argc, char *argv[]) {
     //prompt for and read in a different outFileName
     cout << "Enter in the name of the output file: ";
     cin >> outFileName;
-    cout << outFileName << "\n\n";
 
     //open outFile and check status
+    cout << "Opening the output file...\n\n";
     outFile.open(outFileName.c_str());
 
     //test outFile with header
-    outFile << left << setw(15);
+    outFile << left << setw(15) << "Line Number" << setw(10) << "Letters" << setw(10) << "Digits" << setw(10) << "Other" << "Total" << endl;
   }
 
   //start outputting info to outFile
 
   //start of table
-  outFile << left << setw(15) << "Line Number" << setw(10) << "Letters" << setw(10) << "Digits" << setw(10) << "Other" << "Total" << endl;
-  outFile << left << setw(15) << string(11, '-') << setw(10) << string(7, '-') << setw(10) << string(6, '-') << setw(10) << string(5, '-') << string(5, '-') << endl;
+  outFile << left << setw(15) << string(11, '-') << setw(10) << string(7, '-') << setw(10) << string(7, '-') << setw(10) << string(5, '-') << string(5, '-') << endl;
 
   //while the end of the file has not been reached
   while (inFile.good()) {
@@ -149,7 +148,7 @@ int main(int argc, char *argv[]) {
         //line totals
         lineLetter++;
 
-        //global totals
+        //gloabl totals
         totalChar++;
       }
       else if (isdigit(ch)) {
@@ -165,6 +164,9 @@ int main(int argc, char *argv[]) {
 
         //gloabl totals
         totalChar++;
+
+        //for debugging purposes only
+        //cout << lineIndex << "******" << endl << << "i- " << i << endl << lineLetter << endl << totalLetters << endl << lineChCount << endl << totalDigits << endl << lineNeither << endl << totalNeither << endl << totalChar << endl << lineDigit << "\n\n";
       }
 
       i++;
@@ -180,22 +182,24 @@ int main(int argc, char *argv[]) {
     totalDigits += lineDigit;
     totalNeither += lineNeither;
 
-    //output to table
+
     outFile << left << setw(15) << lineIndex << setw(10) << lineLetter << setw(10) << lineDigit << setw(10) << lineNeither <<  (lineLetter + lineDigit + lineNeither) << endl;
 
     //read in next line before looping back
     getline(inFile, line, '\n');
   }
 
+
+
   //calculate percentages
   letterPer = ((double)totalLetters/(double)totalChar) * 100;
   digitPer = ((double)totalDigits/(double)totalChar) * 100;
   neitherPer = ((double)totalNeither/(double)totalChar) * 100;
 
+
   //total and percent row on tables
-  outFile << string(50, '-')<< endl;
   outFile << left << setw(15) << "Totals" << setw(10) << totalLetters << setw(10) << totalDigits << setw(10) << totalNeither << totalChar << endl;
-  outFile << left << fixed << setprecision(2) << setw(15) << "Percent" << setw(10) << letterPer << setw(10) << digitPer << neitherPer << "\n\n";
+  outFile << left << fixed << setprecision(2) << setw(15) << "Percents" << setw(10) << letterPer << setw(10) << digitPer << setw(10) << neitherPer << "Total" << endl;
 
   //close input and output files
   inFile.close();
