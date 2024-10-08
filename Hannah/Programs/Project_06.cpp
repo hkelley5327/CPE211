@@ -57,7 +57,7 @@ int main(int argc, char *argv[]) {
   //open inFile and check status
   cout << "\nOpening the input file...\n\n";
   inFile.open(inFileName);
-  //getline(inFile, line, '\n');
+  getline(inFile, line, '\n');
 
   //if the end of the input file is reached, the file is empty
   if (inFile.eof()) {
