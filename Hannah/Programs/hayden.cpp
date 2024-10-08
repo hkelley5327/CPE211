@@ -43,7 +43,7 @@ int main(int argc, char *argv[]) {
     cout << string(9,'*') << " Command Line Argument Error " << string(9,'*') << endl;
     cout << "==> Incorrect number of Command Line Arguments!\n";
     cout << "==> Command for running the program is:\n";
-    cout << "==> ./Project_05 inputFileName\n";
+    cout << "==> ./Project_06 inputFileName outputFileName\n";
     cout << string(47,'*') << endl << endl;
     return 1;
   }
@@ -117,7 +117,6 @@ int main(int argc, char *argv[]) {
     cout << outFileName << "\n\n";
 
     //open outFile and check status
-    cout << "Opening the output file...\n\n";
     outFile.open(outFileName.c_str());
 
     //test outFile with header
