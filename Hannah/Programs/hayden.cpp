@@ -184,20 +184,16 @@ int main(int argc, char *argv[]) {
     totalDigits += lineDigit;
     totalNeither += lineNeither;
 
-
     outFile << left << setw(15) << lineIndex << setw(10) << lineLetter << setw(10) << lineDigit << setw(10) << lineNeither <<  (lineLetter + lineDigit + lineNeither) << endl;
 
     //read in next line before looping back
     getline(inFile, line, '\n');
   }
 
-
-
   //calculate percentages
   letterPer = ((double)totalLetters/(double)totalChar) * 100;
   digitPer = ((double)totalDigits/(double)totalChar) * 100;
   neitherPer = ((double)totalNeither/(double)totalChar) * 100;
-
 
   //total and percent row on tables
   outFile << string(50, '-') << endl;
