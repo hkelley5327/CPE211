@@ -57,7 +57,6 @@ int main(int argc, char *argv[]) {
   //open inFile and check status
   cout << "\nOpening the input file...\n\n";
   inFile.open(inFileName);
-  getline(inFile, line, '\n');
 
   //if in fail state, run loop until no longer in fail state
   while (!inFile) {
@@ -82,7 +81,7 @@ int main(int argc, char *argv[]) {
     getline(inFile, line, '\n');
   }
 
-
+  //getline(inFile, line, '\n');
 
 
   cout << "Opening the output file...\n\n";
