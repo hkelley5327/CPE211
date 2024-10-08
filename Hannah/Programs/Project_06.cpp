@@ -11,11 +11,11 @@
 // ****************************************
 
 //include necessary header files
-#include <iostream>             // for cout and cin
-#include <iomanip>              // for setw and justifications
-#include <cctype>               // for isalpha() and isdigit()
-#include <fstream>              // for reading from i/o files
-#include <string>               // for length()
+#include <iostream>
+#include <iomanip>
+#include <cctype>
+#include <fstream>
+//#include <>
 
 using namespace std;
 
