@@ -61,7 +61,9 @@ int main(int argc, char *argv[]) {
 
   //if the end of the file is reached, the file is empty
   if (inFile.eof()) {
-    cout << left << string(13, '*') << "Input File Is Empty" << string(13, '*') << endl;
+    cout << "opening the output file...\n\n"
+
+    cout << left << string(13, '*') << " Input File Is Empty " << string(13, '*') << endl;
     cout << "==> The input file is empty." << endl;
     cout << "==> Terminating the program." << endl;
     cout << string(47, '*') << "\n\n";
@@ -73,7 +75,7 @@ int main(int argc, char *argv[]) {
   while (!inFile) {
 
     //input file error message
-    cout << left << string(15, '*') << "File Open Error" << string(15, '*') << endl;
+    cout << left << string(15, '*') << " File Open Error " << string(15, '*') << endl;
     cout << "==> Input file failed to open properly!!\n";
     cout << "==> Attempted to open file: " << inFileName << endl;
     cout << "==> Please try again...\n";
@@ -200,7 +202,7 @@ int main(int argc, char *argv[]) {
   //total and percent row on tables
   outFile << string(50, '-') << endl;
   outFile << left << setw(15) << "Totals" << setw(10) << totalLetters << setw(10) << totalDigits << setw(10) << totalNeither << totalChar << endl;
-  outFile << left << fixed << setprecision(2) << setw(15) << "Percents" << setw(10) << letterPer << setw(10) << digitPer << neitherPer << endl;
+  outFile << left << fixed << setprecision(2) << setw(15) << "Percent" << setw(10) << letterPer << setw(10) << digitPer << neitherPer << "\n\n";
 
   //close input and output files
   inFile.close();
