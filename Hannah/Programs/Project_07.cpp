@@ -6,7 +6,7 @@
 // Lab Section: 3
 // Due Date: 10/22/24
 // Program description: take a user input in a menu and either
-// approimate pi, flip a fair coin, roll a fair die, or exit the program
+// approimates pi, flip a fair coin, roll a fair die, or exit the program
 // ****************************************
 
 #include <iostream>   //for cin, cout, endl
@@ -62,7 +62,6 @@ int main() {
         cout << string(47, '*') << "\n\n";
     }
   }
-
   //while selection is not exit
   while (selection != 4);
 
@@ -70,8 +69,6 @@ int main() {
 }
 
 void printMenu () {
-  int choice;
-
   cout << string(24, '*') << endl;
   cout << string(5, '*') << " Menu Options " << string(5, '*') << endl;
   cout << string(24, '*') << endl;
@@ -80,10 +77,6 @@ void printMenu () {
   cout << "3) Toss a fair 5-sided die" << endl;
   cout << "4) Exit" << endl;
   cout << string(24, '*') << "\n\n";
-
-  cout << "Enter your choice: ";
-  cin >> selection;
-  cout << "\n" << selection;
 }
 
 //need to get selection from user and then use it
@@ -110,8 +103,9 @@ void obtainInt(int& selection) {
     cout << "==> Please try again...\n";
     cout << string(47, '*') << "\n\n";
 
-    //back to print menu
-    printMenu();
+    //repeat prompt for choice
+    cout << "Enter your choice: "
+    cin >> selection;
   }
 
   //ignore all other inputs
