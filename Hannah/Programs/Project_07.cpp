@@ -32,7 +32,7 @@ int main() {
   int selection;
 
   //seed initilization
-  cout << "Enter in the seed(integer > 0) for the random number generator: ";
+  cout << "\nEnter in the seed(integer > 0) for the random number generator: ";
   cin >> seed;
   cout << seed << "\n\n";
 
@@ -53,7 +53,7 @@ int main() {
         tossDie();
         break;
       case 4:
-        cout << "Exit selected. Exiting the program now...\n\n";
+        cout << "Exit selected.  Exiting the program now...\n\n";
         break;
       default:
         cout << string(15, '*') << " Invalid Integer " << string(15, '*') << "\n\n";
@@ -80,10 +80,6 @@ void printMenu () {
   cout << "3) Toss a fair 5-sided die" << endl;
   cout << "4) Exit" << endl;
   cout << string(24, '*') << "\n\n";
-
-  cout << "Enter your choice: ";
-  cin >> choice;
-  cout << "\n" << choice;
 }
 
 //need to get selection from user and then use it
