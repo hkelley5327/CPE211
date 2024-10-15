@@ -123,7 +123,7 @@ void calcPi() {
 	int insideCircle;
 	double approx;
 
-	count_inside = 0;  // initialize counter to zero
+	insideCircle = 0;  // initialize counter to zero
 
 	cout << "Monte Carlo Method for finding PI has been selected\n\n";
 
@@ -145,7 +145,7 @@ void calcPi() {
 	}
 
 	//approximate pi
-	pi_approx = 4 * (insideCircle / double(iterations));
+	approx = 4 * (insideCircle / double(iterations));
 
 	//print results
 	cout << fixed << setprecision(6) << string(10, '*') << " Option 1: Calculating PI " << string(10, '*') << endl;
