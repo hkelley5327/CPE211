@@ -184,7 +184,7 @@ void coinFlip() {
 	cout << fixed << setprecision(4) << string(10, '*') << " Option 2: Flipping a Coin " << string(10, '*') << endl;
 	cout << "For " << flips << " flips of a fair coin:" << endl;
 	cout << "Heads percentage: " << headsPer << endl;
-	cout << "Tails percentage: " << tailPer << endl;
+	cout << "Tails percentage: " << tailsPer << endl;
 	cout << string(47, '*') << "\n\n";
 }
 
