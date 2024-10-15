@@ -9,6 +9,7 @@
 // approimates pi, flip a fair coin, roll a fair die, or exit the program
 // ****************************************
 
+//include all necessary headers
 #include <iostream>   //for cin, cout, endl
 #include <cmath>      //for sqrt(), pow()
 #include <iomanip>    //for fixed, setprecision()
@@ -62,7 +63,6 @@ int main() {
         cout << string(47, '*') << "\n\n";
     }
   }
-  //while selection is not exit
   while (selection != 4);
 
   return 0;
@@ -102,8 +102,9 @@ void obtainInt(int& selection) {
     cout << "==> Invalid character(s) entered.\n";
     cout << "==> Please try again...\n";
     cout << string(47, '*') << "\n\n";
-
-    //repeat prompt for choice
+    
+    //repeat menu and prompt for choice
+    printMenu();
     cout << "Enter your choice: ";
     cin >> selection;
   }
