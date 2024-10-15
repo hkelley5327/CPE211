@@ -104,7 +104,7 @@ void obtainInt(int& selection) {
     cout << string(47, '*') << "\n\n";
 
     //repeat prompt for choice
-    cout << "Enter your choice: "
+    cout << "Enter your choice: ";
     cin >> selection;
   }
 
