@@ -73,7 +73,7 @@ void printMenu() {
 	cout << "2) Flip a fair coin" << endl;
 	cout << "3) Toss a fair 5-sided die" << endl;
 	cout << "4) Exit" << endl;
-	cout << string(24, '*') << endl << endl;
+	cout << string(24, '*') << "\n\n";
 }
 
 //need selection from user, then use/process it
@@ -116,8 +116,7 @@ void obtainInt(int& selection) {
 }
 
 //uisng Monte Carlo method
-void calculatePi()
-{
+void calcPi() {
 	//varibale declarations
 	double x, y;
 	int iterations;
@@ -148,13 +147,13 @@ void calculatePi()
 	//approximate pi
 	pi_approx = 4 * (insideCircle / double(iterations));
 
+	//print results
 	cout << fixed << setprecision(6) << string(10, '*') << " Option 1: Calculating PI " << string(10, '*') << endl;
 	cout << "For " << iterations << " iterations, pi is about " << approx << endl;
 	cout << string(46, '*') << "\n\n";
 }
 
-void coinFlip()
-{
+void coinFlip() {
 	int flips;
 	double value;
 	int heads = 0;
@@ -178,65 +177,75 @@ void coinFlip()
 	}
 
 	//calculate percentages, should add to 100
-	heads_perc = (heads / double(flips)) * 100;
-	tails_perc = 100 - heads_perc;
+	headsPer = (heads / double(flips)) * 100;
+	tailsPer = 100 - headsPer;
 
-	cout << fixed << setprecision(4);
-	cout << string(10, '*') << " Option 2: Flipping a Coin " << string(10, '*') << endl;
+	//print results
+	cout << fixed << setprecision(4) << string(10, '*') << " Option 2: Flipping a Coin " << string(10, '*') << endl;
 	cout << "For " << flips << " flips of a fair coin:" << endl;
 	cout << "Heads percentage: " << headsPer << endl;
-	cout << "Tails percentage: " << tailPer_perc << endl;
+	cout << "Tails percentage: " << tailPer << endl;
 	cout << string(47, '*') << "\n\n";
 }
 
-void dieToss()
-{
+void tossDie() {
+	//variable declarations and initilizations
 	int rolls;
-	double roll_value;  // random num from 0 to 1 representing dice roll
+	double value;
 	int count1 = 0;
 	int count2 = 0;
 	int count3 = 0;
 	int count4 = 0;
-	int count5 = 0;  // declare and initialize counters to 0
-	double percent1;
-	double percent2;
-	double percent3;
-	double percent4;
-	double percent5;
+	int count5 = 0;
+	double per1, per2, per3, per4, per5;
 
-	cout << "Tossing of a fair 5-sided die has been selected" << endl << endl;
+	cout << "Tossing of a fair 5-sided die has been selected\n\n";
 
+	//get number of rolls
 	cout << "How many times do you want to roll the die? ";
 	cin >> rolls;
-	cout << rolls << endl << endl;
+	cout << rolls << "\n\n";
 
-	for (int i = 0; i < rolls; i++) {  // for each dice roll
-		roll_value = double(rand())/double(RAND_MAX);  // random num from 0 to 1
-		if (roll_value < 0.2)  // values representing side 1
+	//for each dice roll
+	for (int i = 0; i < rolls; i++) {
+		//random number from 0 to 1
+		value = double(rand())/double(RAND_MAX);
+		//side 1
+		if (value < 0.2) {
 			count1++;
-		else if (0.2 <= roll_value && roll_value < 0.4)  // values representing side 2
+		}
+		//side 2
+		else if (0.2 <= value && value < 0.4) {
 			count2++;
-		else if (0.4 <= roll_value && roll_value < 0.6)  // values representing side 3
+		}
+		//side 3
+		else if (0.4 <= value && value < 0.6) {
 			count3++;
-		else if (0.6 <= roll_value && roll_value < 0.8)  // values representing side 4
+		}
+		//side 4
+		else if (0.6 <= value && value < 0.8) {
 			count4++;
-		else  // else, side 5 came up
-			count5++;  // add one to corresponding counter variable
+		}
+		//side 5
+		else {
+			count5++;
+		}
 	}
 
-	percent1 = count1 / double(rolls) * 100;
-	percent2 = count2 / double(rolls) * 100;
-	percent3 = count3 / double(rolls) * 100;
-	percent4 = count4 / double(rolls) * 100;
-	percent5 = count5 / double(rolls) * 100;  // calculate percentages using floating point division
+	//calculate percents
+	per1 = count1 / double(rolls) * 100;
+	per2 = count2 / double(rolls) * 100;
+	per3 = count3 / double(rolls) * 100;
+	per4 = count4 / double(rolls) * 100;
+	per5 = count5 / double(rolls) * 100;
 
-	cout << fixed << setprecision(4);
-	cout << string(10, '*') << " Option 3: Tossing a Die " << string(10, '*') << endl;
+	//print resuts
+	cout << fixed << setprecision(4) << string(10, '*') << " Option 3: Tossing a Die " << string(10, '*') << endl;
 	cout << "For " << rolls << " rolls of a fair die:" << endl;
-	cout << "Side 1 percentage: " << percent1 << endl;
-	cout << "Side 2 percentage: " << percent2 << endl;
-	cout << "Side 3 percentage: " << percent3 << endl;
-	cout << "Side 4 percentage: " << percent4 << endl;
-	cout << "Side 5 percentage: " << percent5 << endl;
-	cout << string(45, '*') << endl << endl;
+	cout << "Side 1 percentage: " << per1 << endl;
+	cout << "Side 2 percentage: " << per2 << endl;
+	cout << "Side 3 percentage: " << per3 << endl;
+	cout << "Side 4 percentage: " << per4 << endl;
+	cout << "Side 5 percentage: " << per5 << endl;
+	cout << string(45, '*') << "\n\n";
 }
