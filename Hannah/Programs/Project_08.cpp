@@ -1,12 +1,12 @@
 // ****************************************
-// Program Title: Project 7
-// Project File: Project_07.cpp
+// Program Title: Project 8
+// Project File: Project_08.cpp
 // Name: Hannah Kelley
 // Course Section: CPE-211-02
 // Lab Section: 3
-// Due Date: 10/22/24
-// Program description: take a user input in a menu and either
-// approimates pi, flip a fair coin, roll a fair die, or exit the program
+// Due Date: 11/03/24
+// Program description: using input file stream, read in and record data
+// to a structure
 // ****************************************
 
 #include <iostream>
@@ -35,11 +35,11 @@ struct record{
 };
 
 //function prototypes
-void printHeader();
-void openInputFile();
-void openOutputFile();
-bool readInfo();
-void printInfo();
+void printHeader(ofstream& outputFile);
+void openInputFile(ifstream& inputFile);
+void openOutputFile(ofstream& outputFile);
+bool readInfo(ifstream& inputFile, Record& record);
+void printInfo(Record& record, ofstream& outputFile);
 
 int main() {
   //io stream variable declarations
