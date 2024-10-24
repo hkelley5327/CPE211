@@ -158,7 +158,7 @@ bool readInfo(ifstream& inputFile, Record& record) {
     if(!inputFile.eof()) {
       //error message
       cout << string(15, '*') << " File Read Error " << string(15, '*') << endl;
-      cout << "==> An error has occured while reading\n==> the input file. Error in file content.\n"
+      cout << "==> An error has occured while reading\n==> the input file. Error in file content.\n";
       cout << "==> Terminating program!!!\n";
       cout << string(47, '*') << "\n\n";
     }
