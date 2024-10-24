@@ -26,10 +26,10 @@ struct Address {
   string street;
   string city;
   string state;
-  int zip;
+  int zipCode;
 };
 
-struct record{
+struct Record{
   Person person;
   Address address;
 };
@@ -149,7 +149,7 @@ bool readInfo(ifstream& inputFile, Record& record) {
   getline(inputFile, record.address.street, '\n');
   getline(inputFile, record.address.city, '\n');
   getline(inputFile, record.address.state, '\n');
-  inputFile >> record.address.zip;
+  inputFile >> record.address.zipCode;
   inputFile >> record.person.firstName;
 
   //after read, if in fail state
