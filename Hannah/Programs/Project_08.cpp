@@ -17,8 +17,8 @@ using namespace std;
 
 //structures
 struct Person {
-  string firstName;
   string lastName;
+  string firstName;
   string phoneNum;
 };
 
@@ -29,7 +29,7 @@ struct Address {
   int zipCode;
 };
 
-struct Record{
+struct Record {
   Person person;
   Address address;
 };
@@ -55,7 +55,7 @@ int main() {
 
   printHeader(outputFile);
 
-  cout << "Processing information. Please wait....\n\n";
+  cout << "Processing information. Please Wait....\n\n";
 
   //while readInfo function returns true
   while (readInfo(inputFile, record)) {
@@ -68,7 +68,6 @@ int main() {
     outputFile << setw(7) << string(5, '-') << setw(20) << string(9, '-') << setw(15) << string(10, '-') << setw(20) << string(4, '-') << string(12, '-') << endl;
     cout << "Program has finished execution.\n\n";
   }
-
   return 0;
 }
 
@@ -126,6 +125,7 @@ void openOutputFile(ofstream& outputFile) {
   while(outputFile.fail()) {
     //error message
     cout << string(15, '*') << " File Open Error " << string(15, '*') << endl;
+    cout << "==> Output file failed to open properly!!!\n";
     cout << "==> Attempted to open file: " << outputFileName << endl;
     cout << "==> Please try again...\n";
     cout << string(47, '*') << "\n\n";
@@ -146,9 +146,10 @@ void openOutputFile(ofstream& outputFile) {
 bool readInfo(ifstream& inputFile, Record& record) {
   inputFile >> record.person.phoneNum;
   inputFile >> record.person.lastName;
-  getline(inputFile, record.address.street, '\n');
-  getline(inputFile, record.address.city, '\n');
-  getline(inputFile, record.address.state, '\n');
+  inputFile.ignore(); //ignore the newline character
+  getline(inputFile, record.address.street); //contains whitespace
+  getline(inputFile, record.address.city);   //contains whitespace
+  getline(inputFile, record.address.state);  //contains whitespace
   inputFile >> record.address.zipCode;
   inputFile >> record.person.firstName;
 
