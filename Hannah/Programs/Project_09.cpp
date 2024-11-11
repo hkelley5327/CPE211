@@ -88,7 +88,7 @@ void readData(ifstream& inFile, int& numRows, int& numCols, BitArray Array1, Bit
   while(inFile) {
     //read in first input array
     for (int row = 0; row < numRows; row++) {
-      for (int col = 0; row < numCols; col++) {
+      for (int col = 0; col < numCols; col++) {
         Array1[row][col] = bit;
         inFile >> bit; //read in next bit
       }
@@ -96,7 +96,7 @@ void readData(ifstream& inFile, int& numRows, int& numCols, BitArray Array1, Bit
 
     //read in second input array
     for (int row = 0; row < numRows; row++) {
-      for (int col = 0; row < numCols; col++) {
+      for (int col = 0; col < numCols; col++) {
         Array2[row][col] = bit;
         inFile >> bit; //read in next bit
       }
