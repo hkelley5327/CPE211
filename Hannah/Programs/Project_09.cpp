@@ -15,6 +15,11 @@
 
 using namespace std;
 
+const int MAX_ROWS = 10;
+const int MAX_COLS = 10;
+
+typedef int BitArray[MAX_ROWS][MAX_COLS];
+
 //function prototypes
 void openInputFile(ifstream&);
 void readData(ifstream&, int&, int&, BitArray, BitArray);
@@ -28,11 +33,6 @@ int main() {
   int numRows;
   int numCols;
 
-  const int MAX_ROWS = 10;
-  const int MAX_COLS = 10;
-
-  typedef int BitArray[MAX_ROWS][MAX_COLS];
-  
   BitArray Array1, Array2; //input arrays
   BitArray orArray, andArray, xorArray; //output arrays
 
@@ -151,14 +151,17 @@ void calcOutputArrays(int& numRows, int& numCols, BitArray Array1, BitArray Arra
           orArray[row][col] = 0;
           andArray[row][col] = 0;
           xorArray[row][col] = 0;
+          break;
         case 1:
           orArray[row][col] = 1;
           andArray[row][col] = 0;
           xorArray[row][col] = 1;
+          break;
         case 2:
           orArray[row][col] = 1;
           andArray[row][col] = 1;
           xorArray[row][col] = 0;
+          break;
       }
     }
   }
