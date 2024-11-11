@@ -28,11 +28,11 @@ int main() {
   int numRows;
   int numCols;
 
-  typedef int BitArray[MAX_ROWS][MAX_COLS];
-
   const int MAX_ROWS = 10;
   const int MAX_COLS = 10;
 
+  typedef int BitArray[MAX_ROWS][MAX_COLS];
+  
   BitArray Array1, Array2; //input arrays
   BitArray orArray, andArray, xorArray; //output arrays
 
