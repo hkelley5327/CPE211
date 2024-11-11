@@ -54,24 +54,22 @@ void openInputFile(ifstream& inFile) {
 
   do {
 
-  //ask for and read in input file name
-  cout << "/nEnter the name of the input file: ";
-  cin >> inFileName;
-  cout << inFileName << "\n\n";
+    //ask for and read in input file name
+    cout << "/nEnter the name of the input file: ";
+    cin >> inFileName;
+    cout << inFileName << "\n\n";
 
-  inFile.open(inFileName.c_str());
+    inFile.open(inFileName.c_str());
 
-  if(!inFile) {
-    cout << string(15, '*') << " File Open Error " << string(15, '*') << endl;
-		cout << "==> Input file failed to open properly!!\n";
-		cout << "==> Attempted to open file: " << inFileName << endl;
-		cout << "==> Please try again...\n";
-		cout << string(47, '*') << "\n\n";
-  }
+    if(!inFile) {
+      cout << string(15, '*') << " File Open Error " << string(15, '*') << endl;
+  		cout << "==> Input file failed to open properly!!\n";
+  		cout << "==> Attempted to open file: " << inFileName << endl;
+  		cout << "==> Please try again...\n";
+  		cout << string(47, '*') << "\n\n";
+    }
 
-} while (!inFile)
-
-  return;
+  } while (!inFile)
 }
 
 void readData(ifstream& inFile, int& numRows, int& numCols, BitArray Array1, BitArray Array2) {
@@ -102,8 +100,6 @@ void readData(ifstream& inFile, int& numRows, int& numCols, BitArray Array1, Bit
       }
     }
   }
-
-  return;
 }
 
 void printInputArrays(int& numRows, int& numCols, BitArray Array1, BitArray Array2) {
@@ -111,7 +107,7 @@ void printInputArrays(int& numRows, int& numCols, BitArray Array1, BitArray Arra
   width = 2*numCols;
 
   cout << "Initial values of the arrays processed\n";
-  cout << string(38, "-") << endl;
+  cout << string(38, '-') << endl;
   cout << left << setw(width) << "Array 1    " << setw(width) << "Array 2\n";
   cout << setw(width) << string(7, '-') << "    " << setw(width) << string(7, '-') << endl;
 
@@ -130,15 +126,13 @@ void printInputArrays(int& numRows, int& numCols, BitArray Array1, BitArray Arra
   }
 
   cout << endl;
-
-  return;
 }
 
 void calcOutputArrays(int& numRows, int& numCols, BitArray Array1, BitArray Array2, BitArray orArray, BitArray andArray, BitArray xorArray) {
   int bitSum;
 
-  for (row = 0; row < numRows; row++) {
-    for (col = 0; col < numCols; col++) {
+  for (int row = 0; row < numRows; row++) {
+    for (int col = 0; col < numCols; col++) {
       //initilixe arrays
       orArray[row][col] = 0;
       andArray[row][col] = 0;
@@ -165,8 +159,6 @@ void calcOutputArrays(int& numRows, int& numCols, BitArray Array1, BitArray Arra
       }
     }
   }
-
-  return;
 }
 
 void printOutputArrays(int& numRows, int& numCols, BitArray orArray, BitArray andArray, BitArray xorArray) {
@@ -202,9 +194,7 @@ void printOutputArrays(int& numRows, int& numCols, BitArray orArray, BitArray an
 		cout << endl;
   }
 
-  cout <<"\n\n";
-
-  return;
+  cout << "\n\n";
 }
 
 void printIntEquivalents(int& numRows, int& numCols, BitArray orArray, BitArray andArray, BitArray xorArray) {
@@ -227,8 +217,4 @@ void printIntEquivalents(int& numRows, int& numCols, BitArray orArray, BitArray 
     }
     cout << setw(8) << orResult << setw(8) << andResult << setw(8) << xorResult << endl;
   }
-
-
-  return;
-
 }
