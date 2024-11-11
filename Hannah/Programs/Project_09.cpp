@@ -40,7 +40,7 @@ int main() {
   openInputFile(inFile);
   readData(inFile, numRows, numCols, Array1, Array2);
   printInputArrays(numRows, numCols, Array1, Array2);
-  calcOutputArrays(numsRows, numCols, Array1, Array2, orArray, andArray, xorArray);
+  calcOutputArrays(numRows, numCols, Array1, Array2, orArray, andArray, xorArray);
   printOutputArrays(numRows, numCols, orArray, andArray, xorArray);
   printIntegerEquivalents(numRows, numCols, orArray, andArray, xorArray);
 
