@@ -26,7 +26,7 @@ void readData(ifstream&, int&, int&, BitArray, BitArray);
 void printInputArrays(int&, int&, BitArray, BitArray);
 void calcOutputArrays(int&, int&, BitArray, BitArray, BitArray, BitArray, BitArray);
 void printOutputArrays(int&, int&, BitArray, BitArray, BitArray);
-void printIntEquivalents(int&, int&, BitArray, BitArray, BitArray);
+void printIntegerEquivalents(int&, int&, BitArray, BitArray, BitArray);
 
 int main() {
   ifstream inFile;
@@ -197,7 +197,7 @@ void printOutputArrays(int& numRows, int& numCols, BitArray orArray, BitArray an
   cout << "\n\n";
 }
 
-void printIntEquivalents(int& numRows, int& numCols, BitArray orArray, BitArray andArray, BitArray xorArray) {
+void printIntegerEquivalents(int& numRows, int& numCols, BitArray orArray, BitArray andArray, BitArray xorArray) {
   int base = 1; //start at 2^0 = 1
   int orResult = 0;
   int andResult = 0;
