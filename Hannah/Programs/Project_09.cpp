@@ -69,7 +69,7 @@ void openInputFile(ifstream& inFile) {
   		cout << string(47, '*') << "\n\n";
     }
 
-  } while (!inFile)
+  } while (!inFile);
 }
 
 void readData(ifstream& inFile, int& numRows, int& numCols, BitArray Array1, BitArray Array2) {
