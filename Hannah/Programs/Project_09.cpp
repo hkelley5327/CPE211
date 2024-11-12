@@ -104,28 +104,28 @@ void readData(ifstream& inFile, int& numRows, int& numCols, BitArray Array1, Bit
 
 void printInputArrays(int& numRows, int& numCols, BitArray Array1, BitArray Array2) {
   int width;
-  width = 2*numCols;
+	width = 2*numCols;  // establish width for header as two times the number of columns
 
-  cout << "Initial values of the arrays processed\n";
-  cout << string(38, '-') << endl;
-  cout << left << setw(width) << "Array 1    " << setw(width) << "Array 2\n";
-  cout << setw(width) << string(7, '-') << "    " << setw(width) << string(7, '-') << endl;
+	cout << "Initial values of the arrays processed" << endl;
+	cout << string(38, '-') << endl;
+	cout << left << setw(width) << "Array 1" << "    " << setw(width) << "Array 2" << endl;
+	cout << setw(width) << string(7, '-') << "    " << setw(width) << string(7, '-') << endl;
 
-  for (int row = 0; row < numRows; row++) {
-    for (int col = 0; col < numCols; col++) {
-      cout << Array1[row][col] << ' ';
-    }
+	for (int row = 0; row < numRows; row++) {
+		for (int col = 0; col < numCols; col++)	{
+			cout << Array1[row][col] << ' ';
+		}  // output first input array
 
-    cout << "    ";
+		cout << "    ";
 
-    for (int col = 0; col < numCols; col++) {
-      cout << Array2[row][col] << ' '; //print first array's value
-    }
+		for (int col = 0; col < numCols; col++) {
+			cout << Array2[row][col] << ' ';
+		}  // output second input array
 
-    cout << endl;
-  }
+		cout << endl;
+	}
 
-  cout << endl;
+	cout << endl;
 }
 
 void calcOutputArrays(int& numRows, int& numCols, BitArray Array1, BitArray Array2, BitArray orArray, BitArray andArray, BitArray xorArray) {
@@ -138,7 +138,7 @@ void calcOutputArrays(int& numRows, int& numCols, BitArray Array1, BitArray Arra
 			xorArray[row][col] = 0;  // initialize entries
 
 			bitSum = Array1[row][col] + Array2[row][col];  // sum of corresponding bit in each input array
-      
+
 			switch (bitSum)
 			{
 				case 0:
@@ -161,18 +161,18 @@ void calcOutputArrays(int& numRows, int& numCols, BitArray Array1, BitArray Arra
 }
 
 void printOutputArrays(int& numRows, int& numCols, BitArray orArray, BitArray andArray, BitArray xorArray) {
-  int width = 2*numCols;
+  int width;
+	width = 2*numCols;
 
-  cout << "OR, AND and XOR results\n";
+	cout << "OR, AND and XOR results" << endl;
 	cout << string(23, '-') << endl;
-	cout << left << setw(width) << "OR" << "    " << setw(width) << "AND" << "    " << setw(width) << "XOR\n";
-	cout << setw(width) << "--" << "    " << setw(width) << "---" << "    " << setw(width) << "---\n";
+	cout << left << setw(width) << "OR" << "    " << setw(width) << "AND" << "    " << setw(width) << "XOR" << endl;
+	cout << setw(width) << "--" << "    " << setw(width) << "---" << "    " << setw(width) << "---" << endl;
 
-  for (int row = 0; row < numRows; row++) {
+	for (int row = 0; row < numRows; row++) {
 		for (int col = 0; col < numCols; col++) {
 			cout << orArray[row][col] << ' ';
 		}  // output or array
-
 		cout << "    ";
 
 		for (int col = 0; col < numCols; col++) {
@@ -181,11 +181,13 @@ void printOutputArrays(int& numRows, int& numCols, BitArray orArray, BitArray an
 
 		cout << "    ";
 
-		for (int col = 0; col < numCols; col++) {
+		for (int col = 0; col < numCols; col++)	{
 			cout << xorArray[row][col] << ' ';
 		}  // output xor array
+
 		cout << endl;
 	}
+
 	cout << "\n\n";
 }
 
@@ -198,7 +200,7 @@ void printIntegerEquivalents(int& numRows, int& numCols, BitArray orArray, BitAr
 	cout << "Integer Equivalents for the rows" << endl << "of the OR, AND and XOR arrays" << endl;
 	cout << string(32, '-') << endl;
 	cout << left << setw(8) << "OR" << setw(8) << "AND" << setw(8) << "XOR" << endl;
-	cout << setw(8) << "--" << setw(8) << "---" << setw(8) << "---" << endl;
+	cout << left << setw(8) << "--" << setw(8) << "---" << setw(8) << "---" << endl;
 
 	for (int row = 0; row < numRows; row++)
 	{
