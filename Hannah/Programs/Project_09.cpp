@@ -170,38 +170,31 @@ void printOutputArrays(int& numRows, int& numCols, BitArray orArray, BitArray an
 	cout << setw(width) << "--" << "    " << setw(width) << "---" << "    " << setw(width) << "---\n";
 
   for (int row = 0; row < numRows; row++) {
-    //output or array
-    for (int col = 0; col < numCols; col++)
-		{
+		for (int col = 0; col < numCols; col++) {
 			cout << orArray[row][col] << ' ';
-		}
+		}  // output or array
 
 		cout << "    ";
 
-    // output and array
-		for (int col = 0; col < numCols; col++)
-		{
+		for (int col = 0; col < numCols; col++) {
 			cout << andArray[row][col] << ' ';
-		}
+		}  // output and array
 
 		cout << "    ";
 
-    // output xor array
-		for (int col = 0; col < numCols; col++)
-		{
+		for (int col = 0; col < numCols; col++) {
 			cout << xorArray[row][col] << ' ';
-		}
+		}  // output xor array
 		cout << endl;
-  }
-
-  cout << "\n\n";
+	}
+	cout << "\n\n";
 }
 
 void printIntegerEquivalents(int& numRows, int& numCols, BitArray orArray, BitArray andArray, BitArray xorArray) {
-  int base = 1; //start at 2^0 = 1
-  int orResult = 0;
-  int andResult = 0;
-  int xorResult = 0;
+  int base; //start at 2^0 = 1
+  int orResult;
+  int andResult;
+  int xorResult;
 
   cout << "Integer Equivalents for the rows" << endl << "of the OR, AND and XOR arrays" << endl;
   cout << string(32, '-') << endl;
@@ -209,6 +202,11 @@ void printIntegerEquivalents(int& numRows, int& numCols, BitArray orArray, BitAr
 	cout << setw(8) << "--" << setw(8) << "---" << setw(8) << "---" << endl;
 
   for (int row = 0; row < numRows; row++) {
+    base = 1;
+    orResult = 0;
+    andResult = 0;
+    xorResult = 0;
+    
     for (int col = numCols - 1; col >= 0; col--) {
       orResult += base*orArray[row][col];
       andResult += base*orArray[row][col];
