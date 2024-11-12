@@ -107,8 +107,8 @@ void printInputArrays(int& numRows, int& numCols, BitArray Array1, BitArray Arra
 
 	cout << "Initial values of the arrays processed" << endl;
 	cout << string(38, '-') << endl;
-	cout << left << setw(width) << "Array 1" << "    " << /*setw(width) <<*/ "Array 2" << endl;
-	cout << setw(width) << string(7, '-') << "    " << setw(width) << string(7, '-') << endl;
+	cout << left << setw(width) << "Array 1" << "    " << "Array 2" << endl;
+	cout << setw(width) << string(7, '-') << "    " << string(7, '-') << endl;
 
 	for (int row = 0; row < numRows; row++) {
 		for (int col = 0; col < numCols; col++)	{
@@ -165,8 +165,8 @@ void printOutputArrays(int& numRows, int& numCols, BitArray orArray, BitArray an
 
 	cout << "OR, AND and XOR results" << endl;
 	cout << string(23, '-') << endl;
-	cout << left << setw(width) << "OR" << "    " << setw(width) << "AND" << "    " << setw(width) << "XOR" << endl;
-	cout << setw(width) << "--" << "    " << setw(width) << "---" << "    " << setw(width) << "---" << endl;
+	cout << left << setw(width) << "OR" << "    " << setw(width) << "AND" << "    " << "XOR" << endl;
+	cout << setw(width) << "--" << "    " << setw(width) << "---" << "    " << "---" << endl;
 
 	for (int row = 0; row < numRows; row++) {
 		for (int col = 0; col < numCols; col++) {
@@ -198,8 +198,8 @@ void printIntegerEquivalents(int& numRows, int& numCols, BitArray orArray, BitAr
 
 	cout << "Integer Equivalents for the rows" << endl << "of the OR, AND and XOR arrays" << endl;
 	cout << string(32, '-') << endl;
-	cout << left << setw(8) << "OR" << setw(8) << "AND" << setw(8) << "XOR" << endl;
-	cout << left << setw(8) << "--" << setw(8) << "---" << setw(8) << "---" << endl;
+	cout << left << setw(8) << "OR" << setw(8) << "AND" << "XOR" << endl;
+	cout << left << setw(8) << "--" << setw(8) << "---" << "---" << endl;
 
 	for (int row = 0; row < numRows; row++)
 	{
@@ -215,6 +215,6 @@ void printIntegerEquivalents(int& numRows, int& numCols, BitArray orArray, BitAr
 			xorResult += base*xorArray[row][col];
 			base *= 2;
 		}  // convert rows from decimal to binary
-		cout << setw(8) << orResult << setw(8) << andResult << setw(8) << xorResult << endl;
+		cout << setw(8) << orResult << setw(8) << andResult << xorResult << endl;
   }
 }
