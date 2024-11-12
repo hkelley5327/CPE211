@@ -53,7 +53,6 @@ void openInputFile(ifstream& inFile) {
   string inFileName;
 
   do {
-
     //ask for and read in input file name
     cout << "\nEnter the name of the input file: ";
     cin >> inFileName;
