@@ -107,7 +107,7 @@ void printInputArrays(int& numRows, int& numCols, BitArray Array1, BitArray Arra
 
 	cout << "Initial values of the arrays processed" << endl;
 	cout << string(38, '-') << endl;
-	cout << left << setw(width) << "Array 1" << "    " << setw(width) << "Array 2" << endl;
+	cout << left << setw(width) << "Array 1" << "    " << /*setw(width) <<*/ "Array 2" << endl;
 	cout << setw(width) << string(7, '-') << "    " << setw(width) << string(7, '-') << endl;
 
 	for (int row = 0; row < numRows; row++) {
