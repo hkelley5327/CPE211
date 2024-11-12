@@ -132,30 +132,29 @@ void calcOutputArrays(int& numRows, int& numCols, BitArray Array1, BitArray Arra
   int bitSum;
 
   for (int row = 0; row < numRows; row++) {
-    for (int col = 0; col < numCols; col++) {
-      //initilixe arrays
-      orArray[row][col] = 0;
-      andArray[row][col] = 0;
-      xorArray[row][col] = 0;
+		for (int col = 0; col < numCols; col++)	{
+			orArray[row][col] = 0;
+			andArray[row][col] = 0;
+			xorArray[row][col] = 0;  // initialize entries
 
-      bitSum = Array1[row][col] + Array2[row][col];
-
-      switch (bitSum) {
-        case 0:
-          orArray[row][col] = 0;
-          andArray[row][col] = 0;
-          xorArray[row][col] = 0;
-          break;
-        case 1:
-          orArray[row][col] = 1;
-          andArray[row][col] = 0;
-          xorArray[row][col] = 1;
-          break;
-        case 2:
-          orArray[row][col] = 1;
-          andArray[row][col] = 1;
-          xorArray[row][col] = 0;
-          break;
+			bitSum = Array1[row][col] + Array2[row][col];  // sum of corresponding bit in each input array
+      
+			switch (bitSum)
+			{
+				case 0:
+					orArray[row][col] = 0;
+					andArray[row][col] = 0;
+					xorArray[row][col] = 0;
+					break;
+				case 1:
+					orArray[row][col] = 1;
+					andArray[row][col] = 0;
+					xorArray[row][col] = 1;
+					break;
+				case 2:
+					orArray[row][col] = 1;
+					andArray[row][col] = 1;
+					xorArray[row][col] = 0;
       }
     }
   }
@@ -191,28 +190,30 @@ void printOutputArrays(int& numRows, int& numCols, BitArray orArray, BitArray an
 }
 
 void printIntegerEquivalents(int& numRows, int& numCols, BitArray orArray, BitArray andArray, BitArray xorArray) {
-  int base; //start at 2^0 = 1
-  int orResult;
-  int andResult;
-  int xorResult;
+  int base;
+	int orResult;
+	int andResult;
+	int xorResult;  // declare variables for decimal equivalents
 
-  cout << "Integer Equivalents for the rows" << endl << "of the OR, AND and XOR arrays" << endl;
-  cout << string(32, '-') << endl;
+	cout << "Integer Equivalents for the rows" << endl << "of the OR, AND and XOR arrays" << endl;
+	cout << string(32, '-') << endl;
 	cout << left << setw(8) << "OR" << setw(8) << "AND" << setw(8) << "XOR" << endl;
 	cout << setw(8) << "--" << setw(8) << "---" << setw(8) << "---" << endl;
 
-  for (int row = 0; row < numRows; row++) {
-    base = 1;
-    orResult = 0;
-    andResult = 0;
-    xorResult = 0;
-    
-    for (int col = numCols - 1; col >= 0; col--) {
-      orResult += base*orArray[row][col];
-      andResult += base*orArray[row][col];
-      xorResult += base*orArray[row][col];
-      base *= 2;
-    }
-    cout << setw(8) << orResult << setw(8) << andResult << setw(8) << xorResult << endl;
+	for (int row = 0; row < numRows; row++)
+	{
+		base = 1;  // 2^0 = 1
+		orResult = 0;
+		andResult = 0;
+		xorResult = 0;  // initialize variables
+
+		for (int col = numCols - 1; col >= 0; col--)
+		{
+			orResult += base*orArray[row][col];
+			andResult += base*andArray[row][col];
+			xorResult += base*xorArray[row][col];
+			base *= 2;
+		}  // convert rows from decimal to binary
+		cout << setw(8) << orResult << setw(8) << andResult << setw(8) << xorResult << endl;
   }
 }
