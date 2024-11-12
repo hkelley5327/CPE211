@@ -65,7 +65,7 @@ void openInputFile(ifstream& inFile) {
   		cout << "==> Input file failed to open properly!!\n";
   		cout << "==> Attempted to open file: " << inFileName << endl;
   		cout << "==> Please try again...\n";
-  		cout << string(47, '*') << "\n\n";
+  		cout << string(47, '*') << "\n";
     }
 
   } while (!inFile);
