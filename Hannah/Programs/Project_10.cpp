@@ -111,6 +111,51 @@ void Date::IncrementDateYear() {
 
 void Date::IncrementDateDays(int days) {
   day += days;
+	// loop to increment appropriate number of months and set correct day
+	while (days > 0)
+	{
+		if (month == 4 || month == 6 || month == 9 || month == 11)
+		{
+			if (day > 30)
+			{
+				day -= 30;
+				days -= 30;  // subtract number of days in the month from additional days and day
+				month++;
+			}
+			else  // if day is less than or equal to number of days in month, then the month and day are correct
+				days = 0;  // break out of loop
+		}
+		else if (month == 2)
+		{
+			if (day > 28)
+			{
+				day -= 28;
+				days -= 28;
+				month++;
+			}
+			else
+				days = 0;
+		}
+		else
+		{
+			if (day > 31)
+			{
+				day -= 31;
+				days -= 31;
+				month++;
+			}
+			else
+				days = 0;
+		}
+
+		if (month > 12)
+		{
+			month = 1;
+			year++;
+		}
+	}
+
+  /*day += days;
 
   while (day > 0) {
     if (month == 4 || month == 6 || month == 9 || month == 11) {
@@ -143,11 +188,12 @@ void Date::IncrementDateDays(int days) {
         days = 0;
       }
     }
+
     if (month > 12) {
       month = 1;
       year++;
     }
-  }
+  }*/
 }
 
 // OBSERVERS -------------------------------------------------------------------
