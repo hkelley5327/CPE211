@@ -54,8 +54,27 @@ void Date::SetDate(int m, int d, int y) {
 void Date::IncrementDateDay() {
   day++;
 
+  if ((day > 30) && (month == 4 || month == 6 || month == 9 || month == 11)) {
+		day = 1;
+		month++;
+	}
+	else if ((day > 28) && (month == 2)) {
+		day = 1;
+		month++;
+	}
+	else if (day > 31){
+		day = 1;
+		month++;
+	}
+	// if month is greater than number of months, increment to first month of next year
+	if (month > 12)
+	{
+		month = 1;
+		year++;
+	}
+
   //check for more days than possible in a month
-  if (day > 31 && (month == 1 || month == 3 || month == 5 || month == 7
+  /*if (day > 31 && (month == 1 || month == 3 || month == 5 || month == 7
     || month == 8 || month ==10 || month == 12)) {
     day = 1;
     month++;
@@ -73,7 +92,7 @@ void Date::IncrementDateDay() {
   if (month > 12) {
     month = 1;
     year++;
-  }
+  } */
 }
 
 void Date::IncrementDateMonth() {
