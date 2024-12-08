@@ -59,14 +59,14 @@ int main() {
   for (int i = 0; i < n - 1; i++) {
     for (int j = 0; j < n - i - 1; j++) {
       if (array[j] > array[j + 1]) {
-        float temp = array[i];
+        float temp = array[j];
         array[j] = array[j + 1];
         array[j + 1] = temp;
       }
     }
   }
 
-  float sum = 0;
+  double sum = 0;
 
   //calculate sum of all entries
   for (int i = 0; i < n; i++) {
