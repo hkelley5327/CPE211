@@ -25,7 +25,26 @@ int main() {
   int numEntries;
   int width;
 
-  openInputFile(inFile);
+  string inFileName;
+
+  //open input file
+  do {
+    //ask for and read in input file name
+    cout << "\nEnter the name of the input file: ";
+    cin >> inFileName;
+    cout << inFileName << "\n\n";
+
+    inFile.open(inFileName.c_str());
+
+    if(!inFile) {
+      cout << string(15, '*') << " File Open Error " << string(15, '*') << endl;
+  		cout << "==> Input file failed to open properly!!\n";
+  		cout << "==> Attempted to open file: " << inFileName << endl;
+  		cout << "==> Please try again...\n";
+  		cout << string(47, '*') << "\n";
+    }
+
+  } while (!inFile);
 
   inFile >> numEntries >> width;
 
@@ -84,23 +103,5 @@ int main() {
 
 //copy paste from previous project. should work fine
 void openInputFile(ifstream& inFile) {
-  string inFileName;
 
-  do {
-    //ask for and read in input file name
-    cout << "\nEnter the name of the input file: ";
-    cin >> inFileName;
-    cout << inFileName << "\n\n";
-
-    inFile.open(inFileName.c_str());
-
-    if(!inFile) {
-      cout << string(15, '*') << " File Open Error " << string(15, '*') << endl;
-  		cout << "==> Input file failed to open properly!!\n";
-  		cout << "==> Attempted to open file: " << inFileName << endl;
-  		cout << "==> Please try again...\n";
-  		cout << string(47, '*') << "\n";
-    }
-
-  } while (!inFile);
 }
