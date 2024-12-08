@@ -48,6 +48,7 @@ int main() {
 
   float array[numEntries];
 
+  float floatNum;
   //read in values
   for (int i = 0; i < numEntries; i++) {
     inFile >> floatNum;
@@ -71,11 +72,11 @@ int main() {
   //calculate median
   if (numEntries % 2 != 0) {
     // If odd, return the middle element
-    median = arr[numEntries / 2];
+    median = array[numEntries / 2];
   }
   else {
     // If even, return the average of the two middle elements
-    median = (arr[(numEntries - 1) / 2] + arr[numEntries / 2]) / 2.0;
+    median = (array[(numEntries - 1) / 2] + array[numEntries / 2]) / 2.0;
   }
 
   int varSum = 0
