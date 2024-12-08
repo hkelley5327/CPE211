@@ -59,7 +59,7 @@ int main() {
   for (int i = 0; i < n - 1; i++) {
     for (int j = 0; j < n - i - 1; j++) {
       if (array[j] > array[j + 1]) {
-        double temp = array[i];
+        float temp = array[i];
         array[j] = array[j + 1];
         array[j + 1] = temp;
       }
