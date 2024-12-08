@@ -17,8 +17,6 @@
 
 using namespace std;
 
-void opneInputFile(ifstream&);
-
 int main() {
   ifstream inFile;
 
@@ -48,7 +46,7 @@ int main() {
 
   inFile >> numEntries >> width;
 
-  float array[numEntries] = {};
+  float array[numEntries];
 
   //read in values
   for (int i = 0; i < numEntries; i++) {
@@ -57,7 +55,7 @@ int main() {
   }
 
   //sort array from low to high
-  sort(array, numEntries);
+  sort(array, array + numEntries - 1);
 
   float sum = 0;
 
@@ -98,10 +96,5 @@ int main() {
   cout << fixed << setfill('.') << setw(width) <<setprecision(3) << "Variance" << variance << endl;
   cout << fixed << setfill('.') << setw(width) <<setprecision(3) << "Standard Deviation" << standDev << endl;
   cout << string(47, '*') << endl;
-
-}
-
-//copy paste from previous project. should work fine
-void openInputFile(ifstream& inFile) {
 
 }
