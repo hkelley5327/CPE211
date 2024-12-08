@@ -52,13 +52,13 @@ int main() {
 
   float median;
   //calculate median
-  if (n % 2 != 0) {
+  if (numEntries % 2 != 0) {
     // If odd, return the middle element
-    median = arr[n / 2];
+    median = arr[numEntries / 2];
   }
   else {
     // If even, return the average of the two middle elements
-    median = (arr[(n - 1) / 2] + arr[n / 2]) / 2.0;
+    median = (arr[(numEntries - 1) / 2] + arr[numEntries / 2]) / 2.0;
   }
 
   int varSum = 0
