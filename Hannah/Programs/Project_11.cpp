@@ -29,7 +29,7 @@ int main() {
   //open input file
   do {
     //ask for and read in input file name
-    cout << "\nEnter the name of the input file (ctrl-c to exit):";
+    cout << "\nEnter the name of the input file (ctrl-c to exit): ";
     cin >> inFileName;
     cout << inFileName << "\n\n";
 
@@ -80,7 +80,7 @@ int main() {
     median = (array[(numEntries - 1) / 2] + array[numEntries / 2]) / 2.0;
   }
 
-  int varSum = 0;
+  float varSum = 0;
   //calculate variance
   for (int i = 0; i < numEntries; i++) {
     varSum += pow((array[i] - avg), 2);
