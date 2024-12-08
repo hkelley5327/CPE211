@@ -29,7 +29,7 @@ int main() {
   //open input file
   do {
     //ask for and read in input file name
-    cout << "\nEnter the name of the input file: ";
+    cout << "\nEnter the name of the input file (ctrl-c to exit):";
     cin >> inFileName;
     cout << inFileName << "\n\n";
 
