@@ -93,7 +93,7 @@ int main() {
   //print out calculations
   cout << string(15, '*') << " File Statistics " << string(15, '*') << endl;
   cout << string(47, '*') << endl;
-  cout << fixed << setfill('.') << setw(width) <<setprecision(3) << "Average" << avg << endl;
+  cout << left << fixed << setfill('.') << setw(width) <<setprecision(3) << "Average" << avg << endl;
   cout << fixed << setfill('.') << setw(width) <<setprecision(3) << "Median" << median << endl;
   cout << fixed << setfill('.') << setw(width) <<setprecision(3) << "Variance" << variance << endl;
   cout << fixed << setfill('.') << setw(width) <<setprecision(3) << "Standard Deviation" << standDev << endl;
