@@ -14,14 +14,13 @@
 #include <string>
 #include <fstream>
 #include <cmath>
-#include <algorithm>
 
 using namespace std;
 
 int main() {
   ifstream inFile;
 
-  int numEntries;
+  int n;
   int width;
 
   string inFileName;
@@ -45,19 +44,19 @@ int main() {
 
   } while (!inFile);
 
-  inFile >> numEntries >> width;
+  inFile >> n >> width;
 
-  float array[numEntries];
+  float array[n];
 
   float floatNum;
   //read in values
-  for (int i = 0; i < numEntries; i++) {
+  for (int i = 0; i < n; i++) {
     inFile >> floatNum;
     array[i] = floatNum;
   }
 
   //sort array from low to high
-  for (int i = 0; i < numEntries - 1; i++) {
+  for (int i = 0; i < n - 1; i++) {
     for (int j = 0; j < n - i - 1; j++) {
       if (array[j] > array[j + 1]) {
         double temp = array[i];
@@ -70,30 +69,30 @@ int main() {
   float sum = 0;
 
   //calculate sum of all entries
-  for (int i = 0; i < numEntries; i++) {
+  for (int i = 0; i < n; i++) {
     sum += array[i];
   }
 
   //calculate average
-  float avg = sum / (float)numEntries;
+  float avg = sum / (float)n;
 
   float median;
   //calculate median
-  if (numEntries % 2 != 0) {
+  if (n % 2 != 0) {
     // If odd, return the middle element
-    median = array[numEntries / 2];
+    median = array[n / 2];
   }
   else {
     // If even, return the average of the two middle elements
-    median = (array[(numEntries - 1) / 2] + array[numEntries / 2]) / 2.0;
+    median = (array[(n - 1) / 2] + array[n / 2]) / 2.0;
   }
 
   float varSum = 0;
   //calculate variance
-  for (int i = 0; i < numEntries; i++) {
+  for (int i = 0; i < n; i++) {
     varSum += pow((array[i] - avg), 2);
   }
-  float variance = varSum/(float)numEntries;
+  float variance = varSum/(float)n;
 
   //calculate standard deviation
   float standDev = sqrt(variance);
