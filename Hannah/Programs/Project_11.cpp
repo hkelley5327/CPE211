@@ -1,5 +1,5 @@
 // ****************************************
-// Program Title: Project 11
+// Program Title: Project 11 (Extra Credit)
 // Project File: Project_11.cpp
 // Name: Hannah Kelley
 // Course Section: CPE-211-02
